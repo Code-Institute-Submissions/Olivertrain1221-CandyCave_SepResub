@@ -1,0 +1,41 @@
+body {
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(173, 0, 189);
+    background: url('/media/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* NAV CSS */
+.nav-theme {
+    color: rgb(173, 0, 189);
+    font-size: 50px;
+}
+
+.nav-item > a:hover {
+    color: rgb(175, 0, 0);
+}
+
+.nav-logo {
+    color: rgb(173, 0, 189);
+    font-size: 70px;
+}
+
+.nav-background {
+    background-color: rgb(61, 59, 61);
+}
+
+/* Index page CSS */
+.index-slogan {
+    color: rgb(173, 0, 189);
+    font-size: 80px;
+    font-family: 'Signika', sans-serif;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.shop-btn {
+    background: rgb(48, 46, 48);
+    border-color: rgb(173, 0, 189);
+    border-width: 4px;
+}
+
