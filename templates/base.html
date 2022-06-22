@@ -46,48 +46,53 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg nav-background">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg nav-background mw-100">
+      <div class="container-fluid mw-100">
         <div class="row">
           <div class="col-4">
             <a class="navbar-brand nav-logo" href="#">CandyCave</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              MAIN<br>MENU
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
         </div>
-        <div class="col-7">
+        <div class="col">
           <div class="justify-content-center collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active nav-theme mr-4" aria-current="page" href="#">Home</a>
+                <a class="nav-link active nav-theme mr-4" aria-current="page" href="#">Home<i class="fa-solid fa-house"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-theme mr-4" href="#">About</a>
+                <a class="nav-link nav-theme mr-4" href="#">About<i class="fa-solid fa-book-open"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-theme mr-4" href="#">Account<i class="fa-solid fa-user"></i></a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-expanded="false">
-                  Shop
+                  Shop<i class="fa-solid fa-bag-shopping"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item nav-theme" href="#">Category</a></li>
-                  <li><a class="dropdown-item nav-theme" href="#">New In</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
+                  <li><a class="dropdown-item nav-theme-dropdown" href="#">Categorys<i class="fa-solid fa-list"></i></a>
                   </li>
-                  <li><a class="dropdown-item nav-theme" href="#">All things Sweet!</a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="#">New In<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li>
+                  <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="#">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
                 </ul>
               </li>
             </ul>
           </div>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Search FOR GOODIES" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
-        <div class="col-1">
+        <div class="">
           <div class=""><i class="fas fa-shopping-bag fa-lg"></i>
             <p>
               {% if grand_total %}
