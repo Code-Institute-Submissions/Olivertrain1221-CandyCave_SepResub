@@ -1,323 +1,301 @@
 [
     {
       "pk": 1,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5001340155",
         "name": "Milk Bottles",
-        "description": "Milk Bottles are renowned around the nation!",
+        "detail": "Milk Bottles are renowned around the nation!",
         "price": 0.01966,
         "category": 1,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0709201205510679M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0709201205510679M.jpg"
       }
     },
     {
       "pk": 2,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5001600425",
         "name": "Kola Cubes",
-        "description": "Tasty cola flavoured, traditional hard boiled sweets. You cant go wrong with these... having been featured in corners shops since the 50's they are a true retro British sweet!",
+        "detail": "Tasty cola flavoured, traditional hard boiled sweets. You cant go wrong with these... having been featured in corners shops since the 50's they are a true retro British sweet!",
         "price": 0.00956,
         "category": 4,
         "rating": 4.6,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0113201617034987M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0113201617034987M.jpg"
       }
     },
     {
       "pk": 3,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5001730010",
         "name": "Lemon Sherberts",
-        "description": "An old-fashioned classic of the sweet world. These hard boiled Sherbet Lemons have a mouth-watering citrus flavour to make your tongue tingle!",
+        "detail": "An old-fashioned classic of the sweet world. These hard boiled Sherbet Lemons have a mouth-watering citrus flavour to make your tongue tingle!",
         "price": 0.00956,
         "category": 2,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1230201417013175M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1230201417013175M.jpg"
       }
     },
     {
       "pk": 4,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5001890157",
         "name": "Haribo Bears 1KG tub",
-        "description": "Haribo bears renowned for there chewy fruity flavour come and buy today!",
+        "detail": "Haribo bears renowned for there chewy fruity flavour come and buy today!",
         "price": 6.99,
         "category": 1,
         "rating": 5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0716201503423610M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0716201503423610M.jpg"
       }
     },
     {
       "pk": 5,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002111605",
         "name": "Strawbs",
-        "description": "Giant in size and flavour, the Haribo Giant Strawbs are delicious gummy sweets, bursting with sweet strawberry flavour. One of Haribo's most popular pick n mix treats, these soft chewy sweets are loved by all. Packed in a generous tub with approximately 100 pieces, they are perfect for your home sweet stash as well as an easy candy buffet choice!",
+        "detail": "Giant in size and flavour, the Haribo Giant Strawbs are delicious gummy sweets, bursting with sweet strawberry flavour. One of Haribo's most popular pick n mix treats, these soft chewy sweets are loved by all. Packed in a generous tub with approximately 100 pieces, they are perfect for your home sweet stash as well as an easy candy buffet choice!",
         "price": 0.00956,
         "category": 1,
         "rating": 5,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1115201210371197C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1115201210371197C.jpg"
       }
     },
     {
       "pk": 6,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002260206",
         "name": "Blue Fizzy Raspberry Bottles",
-        "description": "These fizzy little bottles will burst on your tongue!!",
+        "detail": "These fizzy little bottles will burst on your tongue!!",
         "price": 0.00958,
         "category": 1,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0624201520422666C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0624201520422666C.jpg"
       }
     },
     {
       "pk": 7,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002440521",
         "name": "Shrimp",
-        "description": "Who doesn't love the iconic pick n mix pink shrimp? Super popular with all ages these retro Strawberry flavour and now available in mini size! ",
+        "detail": "Who doesn't love the iconic pick n mix pink shrimp? Super popular with all ages these retro Strawberry flavour and now available in mini size! ",
         "price": 0.01996,
         "category": 1,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0226201317034754M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0226201317034754M.jpg"
       }
     },
     {
       "pk": 8,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002601115",
         "name": "Foamy Bananas",
-        "description": "The iconic foam bananas are now available in mini size! These delicious foam sweets are one of our best sellers and a top choice for pick and mix pouchs!",
+        "detail": "The iconic foam bananas are now available in mini size! These delicious foam sweets are one of our best sellers and a top choice for pick and mix pouchs!",
         "price": 0.01996,
         "category": 1,
         "rating": 4.5,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0926201317071162M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0926201317071162M.jpg"
       }
     },
     {
       "pk": 9,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002690715",
         "name": "Jelly Babys",
-        "description": "The iconic Jelly Baby, could this be the most popular sweet? These colourful fruit flavoured jelly sweets feature a fine covering of sugar dusting to help them from sticking together!",
+        "detail": "The iconic Jelly Baby, could this be the most popular sweet? These colourful fruit flavoured jelly sweets feature a fine covering of sugar dusting to help them from sticking together!",
         "price": 0.01996,
         "category": 1,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1020201517025390M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1020201517025390M.jpg"
       }
     },
     {
       "pk": 10,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002701115",
         "name": "Flying Saucers",
-        "description": "These Outer Dimentional rice paper flying suacers with fizzy sherbert filling",
+        "detail": "These Outer Dimentional rice paper flying suacers with fizzy sherbert filling",
         "price": 0.01996,
         "category": 7,
         "rating": 2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0418201317011949M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0418201317011949M.jpg"
       }
     },
     {
       "pk": 11,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002761055",
         "name": "Strawberry Pencils",
-        "description": "A strawberry chewy pencil filled with fondant.",
+        "detail": "A strawberry chewy pencil filled with fondant.",
         "price": 0.0125,
-        "category": 9,
+        "category": 8,
         "rating": 2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81B0C2D9M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81B0C2D9M.jpg"
       }
     },
     {
       "pk": 12,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002820069",
         "name": "Sour Strawberry Bites",
-        "description": "A strawberry chewy pencil filled with fondant Covered in Sour Sugar.",
+        "detail": "A strawberry chewy pencil filled with fondant Covered in Sour Sugar.",
         "price": 0.0125,
         "category": 2,
         "rating": 4.6,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0510201317010521M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0510201317010521M.jpg"
       }
     },
     {
       "pk": 13,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002820147",
         "name": "Fried Eggs",
-        "description": "A classic haribo sweet.  Gummy sweets shaped like little fried eggs – white on the outside and yellow in the middle.",
+        "detail": "A classic haribo sweet.  Gummy sweets shaped like little fried eggs – white on the outside and yellow in the middle.",
         "price": 0.0155,
         "category": 1,
         "rating": 3.2,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0430201405053680M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0430201405053680M.jpg"
       }
     },
     {
       "pk": 14,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002910572",
         "name": "Dolly Mixtures",
-        "description": "An iconic sweet loved by both adults and children alike.  Made up of various shapes and flavours – these pretty little sweets have been around for over 100 years!",
+        "detail": "An iconic sweet loved by both adults and children alike.  Made up of various shapes and flavours – these pretty little sweets have been around for over 100 years!",
         "price": 0.0115,
         "category": 8,
         "rating": 4.7,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/0900631B81C9387BM.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "0900631B81C9387BM.jpg"
       }
     },
     {
       "pk": 15,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5002990740",
         "name": "Liquorice Allsorts",
-        "description": "A delicious mix of all your liquorice favourites.",
+        "detail": "A delicious mix of all your liquorice favourites.",
         "price": 0.012,
         "category": 1,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP1029201317111469M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP1029201317111469M.jpg"
       }
     },
     {
       "pk": 16,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003050248",
         "name": "Jelly Buttons (aka Spoggs)",
-        "description": "Blue & pink coloured aniseed flavoured chewy sweets.  These are the sweets from the Liquorice Allsorts that you either love or hate.  Personally I love them!!",
+        "detail": "Blue & pink coloured aniseed flavoured chewy sweets.  These are the sweets from the Liquorice Allsorts that you either love or hate.  Personally I love them!!",
         "price": 0.012,
         "category": 1,
         "rating": 4.4,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0918201520303373C.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0918201520303373C.jpg"
       }
     },
     {
       "pk": 17,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003070787",
         "name": "Strawberry Laces",
-        "description": "The classic Strawberry laces shouldnt be missed! Are you a lady and the dog eater or a screw in a ball?",
+        "detail": "The classic Strawberry laces shouldnt be missed! Are you a lady and the dog eater or a screw in a ball?",
         "price": 0.012,
         "category": 6,
         "rating": 4.4,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP1119201520340305C.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP1119201520340305C.jpg"
       }
     },
     {
       "pk": 18,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003090182",
         "name": "Fizzy Strawberry Laces",
-        "description": "The standard Strawberry Lace just got WILD how sour can you go?",
+        "detail": "The standard Strawberry Lace just got WILD how sour can you go?",
         "price": 0.012,
         "category": 6,
         "rating": 4.8,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0807201317072274M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0807201317072274M.jpg"
       }
     },
     {
       "pk": 19,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003090186",
         "name": "Cola Bottles",
-        "description": "The high street classic jelly based Coca Cola flavoured bottles.",
+        "detail": "The high street classic jelly based Coca Cola flavoured bottles.",
         "price": 0.012,
         "category": 2,
         "rating": 1,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0807201317072924M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0807201317072924M.jpg"
       }
     },
     {
       "pk": 20,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003161326",
         "name": "Fudge",
-        "description": "Standard Clotted Cream Fudge chunks for the real sweet tooth among us!",
+        "detail": "Standard Clotted Cream Fudge chunks for the real sweet tooth among us!",
         "price": 0.011,
         "category": 1,
         "rating": 4.7,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0821201317103183M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0821201317103183M.jpg"
       }
     },
     {
       "pk": 21,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003230723",
         "name": "Dib Dab",
-        "description": "The Dib Dab the lick it and roll it high street classic get your Dib on!",
+        "detail": "The Dib Dab the lick it and roll it high street classic get your Dib on!",
         "price": 0.80,
         "category": 3,
         "rating": 4.3,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/0900631B81D676AEM.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "0900631B81D676AEM.jpg"
       }
     },
     {
       "pk": 22,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003270936",
         "name": "Candy Sticks",
-        "description": "The classic stick of pure sugar for those who love the harder sweet candy!",
+        "detail": "The classic stick of pure sugar for those who love the harder sweet candy!",
         "price": 0.20,
         "category": 3,
         "rating": 5,
-        "image_url": "http://s7d2.scene7.com/is/image/JCPenney/DP0917201317033820M.tif?wid=65&hei=65&fmt=jpg&op_usm=.4,.8,0,0&resmode=sharp2",
         "image": "DP0917201317033820M.jpg"
       }
     },
     {
       "pk": 23,
-      "model": "products.product",
+      "model": "sweets.sweet",
       "fields": {
         "sku": "pp5003360384",
         "name": "Fizz Wizz",
-        "description": "",
+        "detail": "",
         "price": 29.99,
         "category": 3,
         "rating": 4.8,
-        "image_url": "http://s7d9.scene7.com/is/image/JCPenney/DP0927201317061305M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
         "image": "DP0927201317061305M.jpg"
       }
-    },
+    }
+  ]
