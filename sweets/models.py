@@ -2,6 +2,13 @@ from django.db import models
 
 
 class Category(models.Model):
+    """
+    To physically see the fixture types see fixtures Ollie!
+    Meta class to overwrite django auto 'Categorys'
+    """
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=250)
     friendly_name = models.CharField(max_length=250, null=True, blank=True)
 
@@ -13,6 +20,9 @@ class Category(models.Model):
 
 
 class Sweet(models.Model):
+    """
+    Model for the Sweets on the site added with fixtures
+    """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=250, null=True, blank=True)
     name = models.CharField(max_length=250)
