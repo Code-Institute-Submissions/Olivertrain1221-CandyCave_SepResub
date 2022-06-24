@@ -50,7 +50,7 @@
       <div class="container-fluid mw-100">
         <div class="row">
           <div class="col-4">
-            <a class="navbar-brand nav-logo" href="#">CandyCave</a>
+            <a class="navbar-brand nav-logo" href="{% url 'home:home' %}">CandyCave</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               MAIN<br>MENU
@@ -82,7 +82,7 @@
                   <li>
                   <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item nav-theme-dropdown" href="#">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
                 </ul>
               </li>
             </ul>

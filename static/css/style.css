@@ -16,6 +16,10 @@ body {
     font-size: 2rem;
 }
 
+.card {
+    
+  }
+
 .nav-item > a:hover {
     color: rgb(175, 0, 0);
 }
@@ -62,3 +66,27 @@ body {
     height: 60px;
 }
 
+.card-img-top {
+    border-radius: 2rem;
+}
+
+.card {
+    max-width: 22rem;
+    border-radius: 2rem;
+    justify-content: center;
+    border-width: thick;
+    border-style: solid;
+    margin: 10px;
+    background-color: rgb(61, 59, 61);
+    border-color: rgb(67, 200, 57);
+}
+
+.card-text-name {
+    font-size: 35px;
+    color: rgb(67, 200, 57)
+}
+
+.card-text {
+    font-size: 30px;
+    color: rgb(255, 0, 225)
+}

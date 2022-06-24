@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- <div class="d-flex w-100 card-deck"> -->
+<div class="row justify-content-center">
+    {% for sweet in sweets %}
+    <div class="card col-sm|md|lg|xl text-center">
+        <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+        <div class="card-body ">
+            <h5 class="card-text-name">{{ sweet.name }}</h5>
+            <p class="card-text">{{ sweet.info|truncatechars:75 }}</p>
+            <p class="card-text">£{{ sweet.price }}per gram</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

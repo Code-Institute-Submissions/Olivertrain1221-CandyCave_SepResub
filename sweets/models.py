@@ -32,5 +32,8 @@ class Sweet(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
+    def info(self):
+        return self.detail
+
     def __str__(self):
         return self.name

@@ -9,7 +9,7 @@
         "price": 0.01966,
         "category": 1,
         "rating": 4.6,
-        "image": "DP0709201205510679M.jpg"
+        "image": "milk_bottles.png"
       }
     },
     {
@@ -22,7 +22,7 @@
         "price": 0.00956,
         "category": 4,
         "rating": 4.6,
-        "image": "DP0113201617034987M.jpg"
+        "image": "kola_cubes.png"
       }
     },
     {
@@ -35,7 +35,7 @@
         "price": 0.00956,
         "category": 2,
         "rating": 4.7,
-        "image": "DP1230201417013175M.jpg"
+        "image": "lemon_sherberts.png"
       }
     },
     {
@@ -48,7 +48,7 @@
         "price": 6.99,
         "category": 1,
         "rating": 5,
-        "image": "DP0716201503423610M.jpg"
+        "image": "haribo_bear_tub.png"
       }
     },
     {
@@ -61,7 +61,7 @@
         "price": 0.00956,
         "category": 1,
         "rating": 5,
-        "image": "DP1115201210371197C.jpg"
+        "image": "strawbs.png"
       }
     },
     {
@@ -74,7 +74,7 @@
         "price": 0.00958,
         "category": 1,
         "rating": 4.7,
-        "image": "DP0624201520422666C.jpg"
+        "image": "blue_fizzy_bottles.png"
       }
     },
     {
@@ -87,7 +87,7 @@
         "price": 0.01996,
         "category": 1,
         "rating": 4.4,
-        "image": "DP0226201317034754M.jpg"
+        "image": "shrimp.png"
       }
     },
     {
@@ -100,7 +100,7 @@
         "price": 0.01996,
         "category": 1,
         "rating": 4.5,
-        "image": "DP0926201317071162M.jpg"
+        "image": "foamy_banana.png"
       }
     },
     {
@@ -113,7 +113,7 @@
         "price": 0.01996,
         "category": 1,
         "rating": 4.7,
-        "image": "DP1020201517025390M.jpg"
+        "image": "jelly_babys.png"
       }
     },
     {
@@ -126,7 +126,7 @@
         "price": 0.01996,
         "category": 7,
         "rating": 2,
-        "image": "DP0418201317011949M.jpg"
+        "image": "flying_saucers.png"
       }
     },
     {
@@ -139,7 +139,7 @@
         "price": 0.0125,
         "category": 8,
         "rating": 2,
-        "image": "0900631B81B0C2D9M.jpg"
+        "image": "strawberry_pencils.png"
       }
     },
     {
@@ -152,7 +152,7 @@
         "price": 0.0125,
         "category": 2,
         "rating": 4.6,
-        "image": "DP0510201317010521M.jpg"
+        "image": "sour_strawverry_bites.png"
       }
     },
     {
@@ -165,7 +165,7 @@
         "price": 0.0155,
         "category": 1,
         "rating": 3.2,
-        "image": "DP0430201405053680M.jpg"
+        "image": "fried_eggs.png"
       }
     },
     {
@@ -178,7 +178,7 @@
         "price": 0.0115,
         "category": 8,
         "rating": 4.7,
-        "image": "0900631B81C9387BM.jpg"
+        "image": "dolly_mixture.png"
       }
     },
     {
@@ -191,7 +191,7 @@
         "price": 0.012,
         "category": 1,
         "rating": 4.8,
-        "image": "DP1029201317111469M.jpg"
+        "image": "liquorice_allsorts.png"
       }
     },
     {
@@ -204,7 +204,7 @@
         "price": 0.012,
         "category": 1,
         "rating": 4.4,
-        "image": "DP0918201520303373C.jpg"
+        "image": "jelly_buttons.png"
       }
     },
     {
@@ -217,7 +217,7 @@
         "price": 0.012,
         "category": 6,
         "rating": 4.4,
-        "image": "DP1119201520340305C.jpg"
+        "image": "strawberry_laces.png"
       }
     },
     {
@@ -230,7 +230,7 @@
         "price": 0.012,
         "category": 6,
         "rating": 4.8,
-        "image": "DP0807201317072274M.jpg"
+        "image": "fizzy_strawberry_laces.png"
       }
     },
     {
@@ -243,7 +243,7 @@
         "price": 0.012,
         "category": 2,
         "rating": 1,
-        "image": "DP0807201317072924M.jpg"
+        "image": "cola_bottles.png"
       }
     },
     {
@@ -256,7 +256,7 @@
         "price": 0.011,
         "category": 1,
         "rating": 4.7,
-        "image": "DP0821201317103183M.jpg"
+        "image": "fudge.png"
       }
     },
     {
@@ -269,7 +269,7 @@
         "price": 0.80,
         "category": 3,
         "rating": 4.3,
-        "image": "0900631B81D676AEM.jpg"
+        "image": "dib_dab.png"
       }
     },
     {
@@ -282,7 +282,7 @@
         "price": 0.20,
         "category": 3,
         "rating": 5,
-        "image": "DP0917201317033820M.jpg"
+        "image": "candy_sticks.png"
       }
     },
     {
@@ -295,7 +295,7 @@
         "price": 29.99,
         "category": 3,
         "rating": 4.8,
-        "image": "DP0927201317061305M.jpg"
+        "image": "fizz_wizz.png"
       }
     }
   ]
