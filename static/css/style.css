@@ -1,31 +1,39 @@
 body {
     font-family: 'Bebas Neue', cursive;
-    color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 /* NAV CSS */
 .nav-theme {
-    color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     font-size: 3rem;
 }
 
 .nav-theme-dropdown {
-    color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     font-size: 2rem;
 }
 
-.card {
-    
-  }
+.sweet_detail {
+    width: 80%;
+    border-radius: 2rem;
+    justify-content: center;
+    border-width: thick;
+    border-style: solid;
+    margin: 20px;
+    background-color: rgb(61, 59, 61);
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+}
 
 .nav-item > a:hover {
     color: rgb(175, 0, 0);
 }
 
 .nav-logo {
-    color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     font-size: 5rem;
 }
 
@@ -35,7 +43,7 @@ body {
 
 /* Index page CSS */
 .index-slogan {
-    color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     font-size: 3rem;
     font-family: 'Signika', sans-serif;
     /* margin-left: 30px; */
@@ -50,7 +58,7 @@ body {
 
 .shop-btn {
     background: rgb(48, 46, 48);
-    border-color: rgb(173, 0, 189);
+    color: rgb(255 0 247);
     border-width: 4px;
 }
 
@@ -60,8 +68,8 @@ body {
 
 .navbar-toggler {
     border-width: 4px;
-    border-color: rgb(173, 0, 189);
-    color: rgb(173, 0, 189);
+    border-color: rgb(5 255 72);
+    color: rgb(255 0 247);
     text-align: center;
     height: 60px;
 }
@@ -76,9 +84,10 @@ body {
     justify-content: center;
     border-width: thick;
     border-style: solid;
-    margin: 10px;
+    margin: 20px;
     background-color: rgb(61, 59, 61);
-    border-color: rgb(67, 200, 57);
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
 }
 
 .card-text-name {
