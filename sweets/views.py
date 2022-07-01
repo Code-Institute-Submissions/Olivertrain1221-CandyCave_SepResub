@@ -10,11 +10,29 @@ def all_sweets(request):
     sweets = Sweet.objects.all()
     query = None
     sweet_type = None
+    sort = None
+    direction = None
+    sort_type = None
 
     if request.GET:
+
+        if 'sort' in request.GET:
+            sort_type = request.GET['sort']
+            sort = sort_type
+            if sort_type == 'name':
+                sort_type == 'lowername'
+                products = products.annotate(lower_name=Lower('name'))
+
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sort_type = f'-{sort_type}'
+            sweets = sweets.order_by(sort_type)
+
         if 'category' in request.GET:
             sweet_type = request.GET['category']
-            sweets = sweets.filter(category__name__in=sweet_type)
+            print(sweet_type)
+            sweets = sweets.filter(category__name=sweet_type)
             sweet_type = Category.objects.filter(name__in=sweet_type)
             print(sweet_type)
 
@@ -27,10 +45,13 @@ def all_sweets(request):
             queries = Q(name__icontains=query) | Q(detail__icontains=query)
             sweets = sweets.filter(queries)
 
+    sorting_method = f'-{sort}_{direction}'
+
     context = {
         'sweets': sweets,
         'search_term': query,
         'sweet_type': sweet_type,
+        'sorting_method': sorting_method,
     }
     return render(request, 'sweets/sweets.html', context)
 

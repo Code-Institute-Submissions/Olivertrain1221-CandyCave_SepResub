@@ -77,8 +77,10 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
                   </li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?sort=price&direction=asc">By Price<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?sort=rating&direction=desc">By Rating<i class="fa-solid fa-party-horn"></i></a></li>
                   <li>
-                  <hr class="dropdown-divider">
+                  <hr class="dropdown-divider"><p class="nav-headings">By Sweet Type</p>
                   </li>
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=squidgy">Squidgy<i class="fa-solid fa-party-horn"></i></a></li>
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=sour">Sour<i class="fa-solid fa-party-horn"></i></a></li>
