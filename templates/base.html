@@ -75,13 +75,19 @@
                   Shop<i class="fa-solid fa-bag-shopping"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item nav-theme-dropdown" href="#">Categorys<i class="fa-solid fa-list"></i></a>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
                   </li>
-                  <li><a class="dropdown-item nav-theme-dropdown" href="#">New In<i class="fa-solid fa-party-horn"></i></a></li>
                   <li>
                   <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=squidgy">Squidgy<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=sour">Sour<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=hard">Boiled/Hard<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=chocolate">Chocolate<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=wrapped">Wrapped<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=long">Long<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=new_arrivals">New Arrivals<i class="fa-solid fa-party-horn"></i></a></li>
+                  <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?category=the_classics">The Classics<i class="fa-solid fa-party-horn"></i></a></li>
                 </ul>
               </li>
             </ul>
