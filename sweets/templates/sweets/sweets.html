@@ -10,7 +10,26 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="d-flex w-100 card-deck"> -->
+<div class="row mt-1 mb-2">
+    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+        <div class="sort-select-wrapper w-50">
+            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
+                <option value="reset" {% if sorting_method == 'None_None' %}selected{% endif %}>Sort by...</option>
+                <option value="price_asc" {% if sorting_method == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                <option value="price_desc" {% if sorting_method == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                <option value="rating_asc" {% if sorting_method == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                <option value="rating_desc" {% if sorting_method == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                <option value="name_asc" {% if sorting_method == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="name_desc" {% if sorting_method == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+            </select>
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if search_term or sweet_type or sorting_method != 'None_None' %}
+                    <span class="small current-fields"><a class="current-fields" href="{% url 'sweets:sweets' %}">Candy Home</a> | </span>
+                {% endif %}
+                {{ sweets|length }} sweets{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+        </div>
+    </div>
+</div>
 <div class="row justify-content-center w-100">
     {% for sweet in sweets %}
     <a href="{% url 'sweets:sweet_individual' sweet.id %}">
@@ -26,6 +45,11 @@
                     <small class="card-text-rating">No Rating</small>
                 {% endif %}
             </div>
+            {% if sweet.category %}
+                <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
+                <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
+                </a>
+            {% endif %}
         </div>
     </a>
     {% endfor %}

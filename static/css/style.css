@@ -1,5 +1,6 @@
 body {
     font-family: 'Bebas Neue', cursive;
+    height: 100%;
     color: rgb(255 0 247);
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -29,8 +30,27 @@ body {
     margin: auto;
 }
 
-.sweet_detail {
-    width: 80%;
+.main-product-container {
+    height: 50rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: rgb(61, 59, 61);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sweet-image-individual {
+    width: auto;
+    border-radius: 2rem;
+    margin: 10px;
+    max-height: 55%;
+}
+
+.sweet-detail {
+    width: 9040rem;
     border-radius: 2rem;
     justify-content: center;
     border-width: thick;
@@ -45,6 +65,18 @@ body {
     color: rgb(175, 0, 0);
 }
 
+.sort-bar {
+    color: rgb(255 0 247);
+    font-size: 1rem;
+    border-radius: 2rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+    width: 9rem;
+}
+
+.current-fields {
+    color: rgb(255 0 247);
+}
 .nav-logo {
     color: rgb(255 0 247);
     font-size: 5rem;

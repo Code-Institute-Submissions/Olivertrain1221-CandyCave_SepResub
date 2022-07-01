@@ -15,7 +15,7 @@ def all_sweets(request):
     sort_type = None
 
     if request.GET:
-
+        # Not creditable to myself (Code Institute LMS for below lines 19-30)
         if 'sort' in request.GET:
             sort_type = request.GET['sort']
             sort = sort_type
@@ -31,10 +31,8 @@ def all_sweets(request):
 
         if 'category' in request.GET:
             sweet_type = request.GET['category']
-            print(sweet_type)
             sweets = sweets.filter(category__name=sweet_type)
             sweet_type = Category.objects.filter(name__in=sweet_type)
-            print(sweet_type)
 
         if 'search' in request.GET:
             query = request.GET['search']
@@ -45,7 +43,8 @@ def all_sweets(request):
             queries = Q(name__icontains=query) | Q(detail__icontains=query)
             sweets = sweets.filter(queries)
 
-    sorting_method = f'-{sort}_{direction}'
+    sorting_method = f'{sort}_{direction}'
+    print(sorting_method)
 
     context = {
         'sweets': sweets,

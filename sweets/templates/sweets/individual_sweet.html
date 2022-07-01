@@ -10,15 +10,20 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="d-flex w-100 card-deck"> -->
-<div class="row justify-content-center">
-    <div class="col-xl-2 text-center sweet_detail">
-        <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
-        <div class="card-body ">
-            <h5 class="card-text-name">{{ sweet.name }}</h5>
-            <p class="card-text">{{ sweet.info }}</p>
-            <p class="card-text">£{{ sweet.price }}per gram</p>
-        </div>
-    </div>
+<div class="main-product-container">
+    {% if sweet.category %}
+        <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
+            <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
+        </a>
+    {% endif %}
+    <img class="sweet-image-individual" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+    <h5 class="card-text-name">{{ sweet.name }}</h5>
+    <p class="card-text">{{ sweet.info }}</p>
+    <p class="card-text">£{{ sweet.price }}per gram</p>
+    {% if sweet.rating %}
+        <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
+    {% else %}
+    <small class="card-text-rating">No Rating</small>
+    {% endif %}
 </div>
 {% endblock %}
