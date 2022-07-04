@@ -1,10 +1,5 @@
-
-
-from pdb import post_mortem
 from decimal import Decimal
 from django.conf import settings
-
-from candy_cave.settings import FREE_POSTAGE_PRICE
 
 def basket_items(request):
     """
