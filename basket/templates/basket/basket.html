@@ -10,13 +10,21 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container mb-2">
         <div class="row">
-            <div class="my-auto slogan">
-                <h1 class="index-slogan">
-                    basket
-                    <a href="{% url 'sweets:sweets' %}" class="btn shop-btn btn-lg">SHOP NOW</a>
-                </h1>
+            <div class="col">
+                <h2 class="basket-header text-center">Welcome to your Goody Bag</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                {% if basket_selection %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p class="basket-empty">Hmmmm Theres Nothing Sweet in here!!! Get Back shopping!
+                    <a href="{% url 'sweets:sweets' %}" class="btn shop-btn btn-lg">SHOP NOW</a></p>
+                {% endif %}
             </div>
         </div>
     </div>

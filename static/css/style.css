@@ -31,7 +31,6 @@ body {
 }
 
 .main-product-container {
-    height: 50rem;
     margin: 1rem;
     border-radius: 2rem;
     background-color: rgb(61, 59, 61);
@@ -91,20 +90,22 @@ body {
     color: rgb(255 0 247);
     font-size: 3rem;
     font-family: 'Signika', sans-serif;
-    /* margin-left: 30px; */
-    /* margin-top: 30px; */
-}
-
-.slogan {
-    margin-left: 33%;
-    /* display: contents; */
-    /* margin-top: 10px; */
+    text-align: center;
+    margin-left: 6rem;
+    background-color: rgba(61, 59, 61, 0.485);
+    border-radius: 1rem;
+    border-color: rgb(255, 0, 0);
+    box-shadow: 2px 2px 8px 8px rgba(255, 0, 0, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+    font-size: 3rem;
 }
 
 .shop-btn {
     background: rgb(48, 46, 48);
     color: rgb(255 0 247);
-    border-width: 4px;
+    border-radius: 1rem;
+    border-color: rgb(255, 0, 0);
+    box-shadow: 2px 2px 8px 8px rgba(255, 0, 0, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+    font-size: 3rem;
 }
 
 .basket {
@@ -113,6 +114,11 @@ body {
     color: rgb(255, 0, 225);
 }
 
+.delivery-banner {
+    font-size: 2rem;
+    color: rgb(72, 255, 0);
+    text-align: center;
+}
 .search-bar {
     max-width: 50%;
 }
@@ -175,4 +181,23 @@ body {
 .card-text {
     font-size: 30px;
     color: rgb(255, 0, 225)
+}
+
+/* Shopping Basket styling */
+.basket-header {
+    text-align: center;
+    font-size: 5rem;
+    color: rgb(255, 0, 225);
+}
+
+.basket-empty {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(255, 0, 225);
+    background-color: rgb(61, 59, 61);
+    background-color: rgb(61, 59, 61);
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
 }
