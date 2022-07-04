@@ -107,20 +107,47 @@ body {
     border-width: 4px;
 }
 
+.basket {
+    font-size: 3rem;
+    text-decoration: none;
+    color: rgb(255, 0, 225);
+}
+
+.search-bar {
+    max-width: 50%;
+}
 .dropdown-menu {
     background-color: rgb(61, 59, 61);
 }
 
 .navbar-toggler {
     border-width: 4px;
-    border-color: rgb(5 255 72);
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
     color: rgb(255 0 247);
     text-align: center;
     height: 60px;
 }
 
+.about-container {
+    background-color: rgb(61, 59, 61);
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+}
+
+.about-text {
+    font-size: 2rem;
+}
+
 .card-img-top {
     border-radius: 2rem;
+    max-height: 15rem;
+    margin-top: 10px;
 }
 
 .card {

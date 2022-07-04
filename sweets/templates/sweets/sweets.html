@@ -13,7 +13,7 @@
 <div class="row mt-1 mb-2">
     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
         <div class="sort-select-wrapper w-50">
-            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
+            <select id="sweet-filter" class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
                 <option value="reset" {% if sorting_method == 'None_None' %}selected{% endif %}>Sort by...</option>
                 <option value="price_asc" {% if sorting_method == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                 <option value="price_desc" {% if sorting_method == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -37,7 +37,7 @@
             <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
             <div class="card-body ">
                 <h5 class="card-text-name">{{ sweet.name }}</h5>
-                <p class="card-text">{{ sweet.info|truncatechars:75 }}</p>
+                <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>
                 <p class="card-text">£{{ sweet.price }}per gram</p>
                 {% if sweet.rating %}
                     <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
@@ -54,4 +54,29 @@
     </a>
     {% endfor %}
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#sweet-filter').change(function() {
+            var filterValue = $(this);
+            var currentUrl = new URL(window.location);
+
+            var userChoice = filterValue.val();
+            if(userChoice != "reset"){
+                var userFilterChoice = userChoice.split("_")[0]
+                var direction = userChoice.split("_")[1]
+                currentUrl.searchParams.set("sort", userFilterChoice);
+                currentUrl.searchParams.set("direction", direction);
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+                
+            }
+        })
+    </script>
 {% endblock %}

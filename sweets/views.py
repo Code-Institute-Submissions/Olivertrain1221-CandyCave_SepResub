@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Sweet, Category
 
 def all_sweets(request):
@@ -21,7 +22,7 @@ def all_sweets(request):
             sort = sort_type
             if sort_type == 'name':
                 sort_type == 'lowername'
-                products = products.annotate(lower_name=Lower('name'))
+                sweets = sweets.annotate(lower_name=Lower('name'))
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']

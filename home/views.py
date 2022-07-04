@@ -7,3 +7,10 @@ def index(request):
     View that returns index page
     """
     return render(request, 'home/index.html')
+
+
+def about(request):
+    """
+    View that returns index page
+    """
+    return render(request, 'home/about.html')

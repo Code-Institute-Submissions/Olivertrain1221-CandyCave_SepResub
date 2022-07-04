@@ -64,11 +64,33 @@
                 <a class="nav-link active nav-theme mr-4" aria-current="page" href="{% url 'home:home' %}">Home<i class="fa-solid fa-house"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-theme mr-4" href="#">About<i class="fa-solid fa-book-open"></i></a>
+                <a class="nav-link nav-theme mr-4" href="{% url 'home:about' %}">About<i class="fa-solid fa-book-open"></i></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link nav-theme mr-4" href="#">Account<i class="fa-solid fa-user"></i></a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-expanded="false">Account<i class="fa-solid fa-user"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                      <li>
+                        <a href="" class="dropdown-item">Sweet Management</a>
+                      </li>
+                    {% endif %}
+                      <li>
+                        <a href="" class="dropdown-item">My Profile</a>
+                      </li>
+                      <li>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                      </li>
+                    {% else %}
+                    <li>
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Signup</a>
+                    </li>
+                   <li>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  </li>
+                  {% endif %}
+                </ul>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                   aria-expanded="false">
@@ -76,7 +98,6 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i class="fa-solid fa-candy"></i></a></li>
-                  </li>
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?sort=price&direction=asc">By Price<i class="fa-solid fa-party-horn"></i></a></li>
                   <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}?sort=rating&direction=desc">By Rating<i class="fa-solid fa-party-horn"></i></a></li>
                   <li>
@@ -94,22 +115,21 @@
               </li>
             </ul>
           </div>
-          <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex">
-            <input class="form-control me-2" type="text" name="search" placeholder="Search FOR GOODIES">
+          <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
+            <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
-        <div class="">
-          <div class=""><i class="fas fa-shopping-bag fa-lg"></i>
-            <p>
+        <div class="text-center">
+          <div><a class="basket" href="{% url 'basket:basket' %}"><i class="fa-solid fa-basket-shopping basket"></i></a></div>
+          <p class="my-0 basket">
               {% if grand_total %}
-              ${{ grand_total|floatformat:2 }}
+                  ${{ grand_total|floatformat:2 }}
               {% else %}
-              $0.00
+                  $0.00
               {% endif %}
-            </p>
-          </div>
-        </div>
+          </p>
+      </div>
       </div>
     </nav>
     {% if request.user.is_authenticated %}
