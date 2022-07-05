@@ -25,7 +25,7 @@
     {% else %}
     <small class="card-text-rating">No Rating</small>
     {% endif %}
-    <form class="form" action="{% url 'basket:add_items_to_basket' product.id %}" method="POST">
+    <form class="form" action="{% url 'basket:add_items_to_basket' sweet.id %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
             <div class="col-12">

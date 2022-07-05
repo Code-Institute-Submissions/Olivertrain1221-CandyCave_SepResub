@@ -30,6 +30,14 @@ body {
     margin: auto;
 }
 
+.table-checkout {
+    background-color: rgb(61, 59, 61);
+    width: 100%;
+    border-radius: 2rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+}
+
 .main-product-container {
     margin: 1rem;
     border-radius: 2rem;
