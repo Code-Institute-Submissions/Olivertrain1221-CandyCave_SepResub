@@ -8,20 +8,33 @@ def basket_items(request):
     Shows the basket items available to all templates
     """
 
+    sweet_calculated_price = []
     basket_selection = []
     basket_sum = 0
     sweet_count = 0
     basket = request.session.get('basket', {})
 
-    for item_id, quantity in basket.items():
-        sweet = get_object_or_404(Sweet, pk=item_id)
-        basket_sum += quantity * sweet.price
-        sweet_count += quantity
-        basket_selection.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'sweet': sweet,
-        })
+    for item_id, item_data in basket.items():
+        if isinstance(item_data, int):
+            sweet = get_object_or_404(Sweet, pk=item_id)
+            basket_sum += item_data * sweet.price
+            sweet_count += item_data
+            basket_selection.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'sweet': sweet,
+            })
+        else:
+            for size, quantity in item_data['items_by_size'].items():
+                sweet = get_object_or_404(Sweet, pk=item_id)
+                basket_sum += quantity * sweet.price
+                sweet_count += quantity
+                basket_selection.append({
+                    'item_id': item_id,
+                    'quantity': item_data,
+                    'sweet': sweet,
+                    'size': size,
+                })
 
 
     if basket_sum < settings.FREE_POSTAGE_PRICE:

@@ -20,9 +20,13 @@
         <div class="row">
             <div class="col">
                 {% if basket_selection %}
+                    {{ basket_selection }}
+                    <br>
+                    <br>
+                    {{ request.session.basket}}
                     <div class="table-responsive rounded table-checkout">
                         <table class="table table-sm table">
-                            <thead>
+                            <thead class="basket-table">
                                 <tr>
                                     <th>Sweet</th>
                                     <th>Description</th>
@@ -33,16 +37,16 @@
                                 </tr>
                             </thead>
                             {% for item in basket_selection %}
-                                <tr>
+                                <tr class="basket-table">
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.sweet.image.url }}">
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{item.sweet.name}}</strong></p>
-                                        <p class="my-0">SKU: {{ item.sweet.sku|upper }}</p>
+                                            <p class="my-0"><strong>{{item.sweet.name}}</strong></p>
+                                            <p class="my-0 text-muted">SKU: {{ item.sweet.sku|upper }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">£{{ item.sweet.price }}</p>
+                                        <p class="my-0">£{{ item.sweet.detail|truncatechars:25 }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
@@ -50,10 +54,12 @@
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.sweet.price }}</p>
                                     </td>
+                                    <td class="py-3">
+                                    </td>
                                 </tr>
                                 {% endfor %}
                                 <tr>
-                                    <td colspan="5" class="pt-5 text-right">
+                                    <td colspan="5" class="pt-5 text-right basket-table">
                                         <h6><strong>Bag Total: ${{ basket_sum|floatformat:2 }}</strong></h6>
                                         <h6>Postage: ${{ post|floatformat:2 }}</h6>
                                         <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
