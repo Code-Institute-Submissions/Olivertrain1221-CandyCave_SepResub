@@ -1,5 +1,7 @@
 from pathlib import Path
 import os
+if os.path.exists("env.py"):
+    import env
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -8,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6k5z*8#v@f&oae7j(2-oir#^g5w-yi1knc0fb$jej+89@kk(jm'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
