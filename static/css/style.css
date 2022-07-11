@@ -97,23 +97,21 @@ body {
 .index-slogan {
     color: rgb(255 0 247);
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
     font-family: 'Signika', sans-serif;
     text-align: center;
-    margin-left: 6rem;
-    background-color: rgba(61, 59, 61, 0.485);
-    border-radius: 1rem;
-    border-color: rgb(255, 0, 0);
-    box-shadow: 2px 2px 8px 8px rgba(255, 0, 0, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
-    font-size: 3rem;
 }
 
 .shop-btn {
-    background: rgb(48, 46, 48);
+    background-color: rgba(61, 59, 61, 0.485);
     color: rgb(255 0 247);
-    border-radius: 1rem;
-    border-color: rgb(255, 0, 0);
-    box-shadow: 2px 2px 8px 8px rgba(255, 0, 0, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
     font-size: 3rem;
+}
+
+
+.shop-btn:hover {
+    color: rgba(9, 255, 0, 0.768);
 }
 
 .basket {
@@ -156,6 +154,17 @@ body {
 
 .about-text {
     font-size: 2rem;
+    justify-content: center;
+}
+
+.about-images {
+    border-radius: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.basket-table {
+    font-size: 2.5rem;
 }
 
 .card-img-top {
@@ -208,4 +217,14 @@ body {
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+}
+
+
+/* MEDIA QUERIES */
+
+/* Small devices 300px */
+@media (max-width: 320px) {
+    .nav-logo{
+        font-size: 4rem;
+    }
 }

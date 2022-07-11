@@ -28,11 +28,23 @@
     <form class="form" action="{% url 'basket:add_items_to_basket' sweet.id %}" method="POST">
         {% csrf_token %}
         <div class="form-row">
+            {% with sweet.measurement_of_sweet as m %}
+            {% if m %}
+                <div class="col-11">
+                    <p>Measurement of SUGARNESS</p>
+                    <select class="form-control rounded-0 w-50" name="sweet_measurement" id="id_sweet_measurement">
+                        <option value="100">100G</option>
+                        <option value="150">150g</option>
+                        <option value="200">200g</option>
+                        <option value="250">250g</option>
+                    </select>
+                </div>
+            {% endif %}
             <div class="col-12">
                 <p class="mt-3"><strong>Quantity:</strong></p>
                 <div class="form-group w-50">
                     <div class="input-group">
-                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ sweet.id }}" id="id_qty_{{ sweet.id }}">
+                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="20" data-item_id="{{ sweet.id }}" id="id_qty_{{ sweet.id }}">
                     </div>
                 </div>
             </div>
@@ -47,6 +59,7 @@
                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+            {% endwith %}
         </div>
     </form>
 </div>
