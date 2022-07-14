@@ -24,7 +24,6 @@ class Sweet(models.Model):
     Model for the Sweets on the site added with fixtures
     """
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=250, null=True, blank=True)
     name = models.CharField(max_length=250)
     detail = models.TextField()
     measurement_of_sweet = models.BooleanField(default=False, null=True, blank=True)

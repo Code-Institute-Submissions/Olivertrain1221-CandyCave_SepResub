@@ -3,15 +3,14 @@ from .models import Sweet, Category
 
 class SweetAdmin(admin.ModelAdmin):
     list_display = (
-        'sku',
         'name',
         'category',
         'price',
         'rating',
         'image',
     )
-  
-    ordering = ('sku',)
+
+    ordering = ('name',)
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (

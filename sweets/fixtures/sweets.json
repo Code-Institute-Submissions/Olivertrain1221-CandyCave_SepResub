@@ -3,7 +3,6 @@
       "pk": 1,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5001340155",
         "name": "Milk Bottles",
         "detail": "Milk Bottles are renowned around the nation!",
         "price": 0.01966,
@@ -16,7 +15,6 @@
       "pk": 2,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5001600425",
         "name": "Kola Cubes",
         "detail": "Tasty cola flavoured, traditional hard boiled sweets. You cant go wrong with these... having been featured in corners shops since the 50's they are a true retro British sweet!",
         "price": 0.00956,
@@ -29,7 +27,6 @@
       "pk": 3,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5001730010",
         "name": "Lemon Sherberts",
         "detail": "An old-fashioned classic of the sweet world. These hard boiled Sherbet Lemons have a mouth-watering citrus flavour to make your tongue tingle!",
         "price": 0.00956,
@@ -42,7 +39,6 @@
       "pk": 4,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5001890157",
         "name": "Haribo Bears 1KG tub",
         "detail": "Haribo bears renowned for there chewy fruity flavour come and buy today!",
         "price": 6.99,
@@ -55,7 +51,6 @@
       "pk": 5,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002111605",
         "name": "Strawbs",
         "detail": "Giant in size and flavour, the Haribo Giant Strawbs are delicious gummy sweets, bursting with sweet strawberry flavour. One of Haribo's most popular pick n mix treats, these soft chewy sweets are loved by all. Packed in a generous tub with approximately 100 pieces, they are perfect for your home sweet stash as well as an easy candy buffet choice!",
         "price": 0.00956,
@@ -68,7 +63,6 @@
       "pk": 6,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002260206",
         "name": "Blue Fizzy Raspberry Bottles",
         "detail": "These fizzy little bottles will burst on your tongue!!",
         "price": 0.00958,
@@ -81,7 +75,6 @@
       "pk": 7,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002440521",
         "name": "Shrimp",
         "detail": "Who doesn't love the iconic pick n mix pink shrimp? Super popular with all ages these retro Strawberry flavour and now available in mini size! ",
         "price": 0.01996,
@@ -94,7 +87,6 @@
       "pk": 8,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002601115",
         "name": "Foamy Bananas",
         "detail": "The iconic foam bananas are now available in mini size! These delicious foam sweets are one of our best sellers and a top choice for pick and mix pouchs!",
         "price": 0.01996,
@@ -107,7 +99,6 @@
       "pk": 9,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002690715",
         "name": "Jelly Babys",
         "detail": "The iconic Jelly Baby, could this be the most popular sweet? These colourful fruit flavoured jelly sweets feature a fine covering of sugar dusting to help them from sticking together!",
         "price": 0.01996,
@@ -120,7 +111,6 @@
       "pk": 10,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002701115",
         "name": "Flying Saucers",
         "detail": "These Outer Dimentional rice paper flying suacers with fizzy sherbert filling",
         "price": 0.01996,
@@ -133,7 +123,6 @@
       "pk": 11,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002761055",
         "name": "Strawberry Pencils",
         "detail": "A strawberry chewy pencil filled with fondant.",
         "price": 0.0125,
@@ -146,7 +135,6 @@
       "pk": 12,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002820069",
         "name": "Sour Strawberry Bites",
         "detail": "A strawberry chewy pencil filled with fondant Covered in Sour Sugar.",
         "price": 0.0125,
@@ -159,7 +147,6 @@
       "pk": 13,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002820147",
         "name": "Fried Eggs",
         "detail": "A classic haribo sweet.  Gummy sweets shaped like little fried eggs – white on the outside and yellow in the middle.",
         "price": 0.0155,
@@ -172,7 +159,6 @@
       "pk": 14,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002910572",
         "name": "Dolly Mixtures",
         "detail": "An iconic sweet loved by both adults and children alike.  Made up of various shapes and flavours – these pretty little sweets have been around for over 100 years!",
         "price": 0.0115,
@@ -185,7 +171,6 @@
       "pk": 15,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5002990740",
         "name": "Liquorice Allsorts",
         "detail": "A delicious mix of all your liquorice favourites.",
         "price": 0.012,
@@ -198,7 +183,6 @@
       "pk": 16,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003050248",
         "name": "Jelly Buttons (aka Spoggs)",
         "detail": "Blue & pink coloured aniseed flavoured chewy sweets.  These are the sweets from the Liquorice Allsorts that you either love or hate.  Personally I love them!!",
         "price": 0.012,
@@ -211,7 +195,6 @@
       "pk": 17,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003070787",
         "name": "Strawberry Laces",
         "detail": "The classic Strawberry laces shouldnt be missed! Are you a lady and the dog eater or a screw in a ball?",
         "price": 0.012,
@@ -224,7 +207,6 @@
       "pk": 18,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003090182",
         "name": "Fizzy Strawberry Laces",
         "detail": "The standard Strawberry Lace just got WILD how sour can you go?",
         "price": 0.012,
@@ -237,7 +219,6 @@
       "pk": 19,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003090186",
         "name": "Cola Bottles",
         "detail": "The high street classic jelly based Coca Cola flavoured bottles.",
         "price": 0.012,
@@ -250,7 +231,6 @@
       "pk": 20,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003161326",
         "name": "Fudge",
         "detail": "Standard Clotted Cream Fudge chunks for the real sweet tooth among us!",
         "price": 0.011,
@@ -263,7 +243,6 @@
       "pk": 21,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003230723",
         "name": "Dib Dab",
         "detail": "The Dib Dab the lick it and roll it high street classic get your Dib on!",
         "price": 0.80,
@@ -276,7 +255,6 @@
       "pk": 22,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003270936",
         "name": "Candy Sticks",
         "detail": "The classic stick of pure sugar for those who love the harder sweet candy!",
         "price": 0.20,
@@ -289,7 +267,6 @@
       "pk": 23,
       "model": "sweets.sweet",
       "fields": {
-        "sku": "pp5003360384",
         "name": "Fizz Wizz",
         "detail": "",
         "price": 29.99,
