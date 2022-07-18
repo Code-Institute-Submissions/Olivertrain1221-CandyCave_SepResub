@@ -9,6 +9,7 @@ def basket_items(request):
     """
 
     sweet_calculated_price = []
+    quantity = 0
     basket_selection = []
     basket_sum = 0
     sweet_count = 0
@@ -53,7 +54,6 @@ def basket_items(request):
         'basket_sum': basket_sum,
         'sweet_count': sweet_count,
         'post': post,
-        'quantity': quantity,
         'free_postage_mark': free_postage_mark,
         'free_postage_price': settings.FREE_POSTAGE_PRICE,
         'grand_total': grand_total,
