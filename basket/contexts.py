@@ -29,9 +29,11 @@ def basket_items(request):
                 sweet = get_object_or_404(Sweet, pk=item_id)
                 basket_sum += quantity * sweet.price
                 sweet_count += quantity
+                print(sweet_count)
+                print(quantity)
                 basket_selection.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'sweet': sweet,
                     'size': size,
                 })
@@ -51,9 +53,9 @@ def basket_items(request):
         'basket_sum': basket_sum,
         'sweet_count': sweet_count,
         'post': post,
+        'quantity': quantity,
         'free_postage_mark': free_postage_mark,
         'free_postage_price': settings.FREE_POSTAGE_PRICE,
         'grand_total': grand_total,
     }
-
     return context

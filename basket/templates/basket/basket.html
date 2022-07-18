@@ -20,10 +20,8 @@
         <div class="row">
             <div class="col">
                 {% if basket_selection %}
-                    {{ basket_selection }}
                     <br>
                     <br>
-                    {{ request.session.basket}}
                     <div class="table-responsive rounded table-checkout">
                         <table class="table table-sm table">
                             <thead class="basket-table">
@@ -33,7 +31,6 @@
                                     <th></th>
                                     <th>Quantity</th>
                                     <th>Price</th>
-                                    <th>Total</th>
                                 </tr>
                             </thead>
                             {% for item in basket_selection %}
@@ -45,7 +42,7 @@
                                             <p class="my-0"><strong>{{item.sweet.name}}</strong></p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">£{{ item.sweet.detail|truncatechars:25 }}</p>
+                                        <p class="my-0">{{ item.sweet.detail|truncatechars:25 }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>
