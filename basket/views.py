@@ -52,15 +52,21 @@ def add_items_to_basket(request, item_id):
 
 def adjust_basket(request, item_id):
     """Adjust the quantity of the specified sweet to the specified amount"""
+    sweet = get_object_or_404(Sweet, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
+    print("start")
+    print(quantity)
     if 'sweet_measurement' in request.POST:
         size = request.POST['sweet_measurement']
+        print(size)
     basket = request.session.get('basket', {})
-
+    print(basket)
     if size:
         if quantity > 0:
             basket[item_id]['items_by_size'][size] = quantity
+            print("if1")
+            print(basket)
             # messages.success(request, f'Updated size {size.upper()}
             # {product.name} quantity to
             # {bag[item_id]["items_by_size"][size]}')
@@ -68,18 +74,28 @@ def adjust_basket(request, item_id):
             del basket[item_id]['items_by_size'][size]
             if not basket[item_id]['items_by_size']:
                 basket.pop(item_id)
+                print("if2")
+                print(basket)
             # messages.success(request, f'Removed size
             # {size.upper()} {sweet.name} from your bag')
     else:
         if quantity > 0:
             basket[item_id] = quantity
+            print("if3")
+            print(basket)
             # messages.success(request, f'Updated
             # {sweet.name} quantity to {basket[item_id]}')
         else:
             basket.pop(item_id)
+            print("if4")
+            print(basket)
             # messages.success(request, f'Removed {sweet.name} from your bag')
 
     request.session['basket'] = basket
+    print("got here end of request.sessiom")
+    print(request.session.get('basket', {}))
+    print("compare")
+    print(basket)
     return redirect(reverse('view_basket'))
 
 

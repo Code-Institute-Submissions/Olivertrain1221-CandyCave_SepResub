@@ -36,6 +36,9 @@ INSTALLED_APPS = [
     'sweets',
     'basket',
     'checkout',
+
+    #EXTRA
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +52,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'candy_cave.urls'
+
+CRISPY_TEMPLATE_PACK = 'boostrap4'
 
 TEMPLATES = [
     {
@@ -66,6 +71,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'basket.contexts.basket_items',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_tags',
+            ]
         },
     },
 
