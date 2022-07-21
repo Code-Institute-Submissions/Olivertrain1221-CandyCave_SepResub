@@ -13,13 +13,13 @@ def basket_items(request):
     basket_selection = []
     basket_sum = 0
     sweet_count = 0
+    size = 0
     basket = request.session.get('basket', {})
 
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
             sweet = get_object_or_404(Sweet, pk=item_id)
-            sweet_total = sweet.price * size
-            basket_sum += item_data * sweet_total
+            basket_sum += item_data * sweet.price
             sweet_count += item_data
             basket_selection.append({
                 'item_id': item_id,

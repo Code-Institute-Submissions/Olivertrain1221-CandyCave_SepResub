@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'candy_cave.urls'
 
-CRISPY_TEMPLATE_PACK = 'boostrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'basket.contexts.basket_items',
             ],
             'builtins': [
@@ -161,7 +162,10 @@ FREE_LOLLYPOP_REQUIREMENTS = 20
 
 FREE_POSTAGE_PRICE = 30
 DELIVERY_PERCENTAGE = 10
-
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
