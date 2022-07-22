@@ -1,3 +1,13 @@
 .checkout-backing {
     background: rgba(51, 51, 51, 0.783);
 }
+
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}

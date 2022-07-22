@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-black text-white">
+                <h4 class="delivery-banner my-1">PROFILE</h4>                
+                <div class="row">
+                    <div class="col index-slogan">
+                        <a href="{% url 'sweets:sweets' %}" class="shop-btn">ENTER IF YOU DARE SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ profile }}
+{% endblock %}
