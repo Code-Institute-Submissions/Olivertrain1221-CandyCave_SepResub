@@ -13,13 +13,55 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col bg-black text-white">
-                <h4 class="delivery-banner my-1">PROFILE</h4>                
+                <h4 class="delivery-banner mt-4">WELCOME TO THE PROFILE</h4>                
                 <div class="row">
-                    <div class="col index-slogan">
-                        <a href="{% url 'sweets:sweets' %}" class="shop-btn">ENTER IF YOU DARE SHOP NOW</a>
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <p>Default Delivery Infor</p>
+            <form action="{% url 'profile:profile' %}" method="POST" id="profile-form-update">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-black">Update Changes</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>Order History</p>
+            <div class="sweet-order table-responsive">
+                <table class="table table-sm table">
+                    <thead>
+                        <tr>
+                            <th>Order Number</th>
+                            <th>Date of purchase</th>
+                            <th>Sweet</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <td>
+                                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">{{ order.order_number|truncatechars: 8 }}</a>
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>
+                                    <ul>
+                                        {% for item in order.lineitems.all %}
+                                            <li class="small">
+                                                {% if item.sweet.measurement_of_sweet %}Sweet Measurement {{ item.sweet.size|upper }}{% endif %}
+                                             </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {{ orders }}
         </div>
     </div>
     {{ profile }}

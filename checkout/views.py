@@ -14,7 +14,7 @@ import stripe
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
-        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.api_key = settings.STRIPE_CLIENT_SECRET
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
             'save_info': request.POST.get('save_info'),
@@ -28,19 +28,19 @@ def cache_checkout_data(request):
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
-    stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe_secret_key = settings.STRIPE_CLIENT_KEY
     if request.method == 'POST':
         basket = request.session.get('basket', {})
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
-            'country': request.POST['country'],
-            'postcode': request.POST['postcode'],
-            'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
+            'town_or_city': request.POST['town_or_city'],
+            'postcode': request.POST['postcode'],
             'county': request.POST['county'],
+            'country': request.POST['country'],
+            'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
