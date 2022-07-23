@@ -139,22 +139,9 @@
             </ul>
           </div>
           {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                <!-- {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %} -->
-            {% endfor %}
-        </div>
-    {% endif %}
+            <div class="message-container">
+            </div>
+          {% endif %}
           <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
             <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
             <button class="btn btn-outline-success" type="submit">Search</button>

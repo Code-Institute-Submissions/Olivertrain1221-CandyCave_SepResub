@@ -24,7 +24,7 @@ class Profile(models.Model):
         return self.user.username
 
 @receiver(post_save, sender=User)
-def create_of_upodate_user_profile(sender, instance, created, **kwargs):
+def create_of_update_user_profile(sender, instance, created, **kwargs):
     """
     creates or updates depending on if already a profiel
     """
