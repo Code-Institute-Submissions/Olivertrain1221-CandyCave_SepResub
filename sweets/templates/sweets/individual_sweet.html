@@ -16,7 +16,9 @@
             <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
         </a>
     {% endif %}
-    <img class="sweet-image-individual" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+    {% if sweet.image %}
+        <img class="sweet-image-individual" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+    {% endif %}
     <h5 class="card-text-name">{{ sweet.name }}</h5>
     <p class="card-text">{{ sweet.info }}</p>
     <p class="card-text">£{{ sweet.price }}per gram</p>

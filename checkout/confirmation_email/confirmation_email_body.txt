@@ -1,0 +1,14 @@
+Hello there {{ order.full_name }}, Fantastic were just writing a sweet message (if you pardon the pun), to say we have got your order and are busy packing it!
+
+For your records of all the boring detail here is also a reciept should you have any issues!
+
+Order Number: {{ order.order_number }}
+Date Order was placed: {{ order.date }}
+
+Order Total: {{ order.grand_total }}
+
+And just to confirm were sending your goodies to {{ order.street_address1 }} in {{ order.town_or_city }}
+
+Thankyou for the order and we look forward to shipping to sweets!
+
+Candy Cave

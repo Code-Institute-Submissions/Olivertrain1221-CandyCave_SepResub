@@ -76,7 +76,7 @@
                   {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                   <li>
-                    <a href="" class="dropdown-item nav-theme-dropdown">Sweet Management</a>
+                    <a href="{% url 'sweets:amend_sweets' %}" class="dropdown-item nav-theme-dropdown">Sweet Management</a>
                   </li>
                   {% endif %}
                   <li>

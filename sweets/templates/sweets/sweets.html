@@ -34,7 +34,9 @@
     {% for sweet in sweets %}
     <a href="{% url 'sweets:sweet_individual' sweet.id %}">
         <div class="card col-xl-2 text-center">
-            <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+            {% if sweet.image %}
+                <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
+            {% endif %}
             <div class="card-body ">
                 <h5 class="card-text-name">{{ sweet.name }}</h5>
                 <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>

@@ -2,7 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
+from sweets.forms import ProductForm
 from .models import Sweet, Category
+from .forms import ProductForm
 
 def all_sweets(request):
     """
@@ -66,3 +69,22 @@ def individual_sweet(request, product_id):
         'sweet': sweet,
     }
     return render(request, 'sweets/individual_sweet.html', context)
+
+
+def user_add_sweets(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added sweet to shop')
+            return redirect(reverse('sweets:amend_sweets'))
+        else:
+            messages.error(request, 'failed to add product!')
+    else:
+        form = ProductForm()
+        
+    template = 'sweets/amend_sweets.html'
+    context = {
+        'form': form
+    }
+    return render(request, template, context)

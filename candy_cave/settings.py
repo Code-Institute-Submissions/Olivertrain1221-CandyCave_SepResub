@@ -1,5 +1,4 @@
 from pathlib import Path
-import dj_database_url
 import os
 if os.path.exists("env.py"):
     import env
@@ -37,8 +36,6 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
-
-    #EXTRA
     'crispy_forms',
 ]
 
@@ -167,6 +164,7 @@ STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_CLIENT_KEY = os.getenv('STRIPE_CLIENT_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+DEFAULT_FROM_EMAIL = 'candycave@example.com'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
