@@ -1,1 +1,1 @@
-web: gunicorn candy-cave.wsgi:application
+web: gunicorn candycave.wsgi:application
