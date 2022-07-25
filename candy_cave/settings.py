@@ -3,6 +3,8 @@ import os
 if os.path.exists("env.py"):
     import env
 
+import dj_database_url
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -106,13 +108,16 @@ WSGI_APPLICATION = 'candy_cave.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse('postgres://cksuxreatyajyx:8ae01e8f1515d2d723be422cd96840c2259d1973b17991c3e817778caa2f3091@ec2-52-208-164-5.eu-west-1.compute.amazonaws.com:5432/d9lm5traipkmta')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

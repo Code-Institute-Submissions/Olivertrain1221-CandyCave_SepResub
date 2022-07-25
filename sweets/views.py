@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
 
-from sweets.forms import ProductForm
+from sweets.forms import SweetForm
 from .models import Sweet, Category
-from .forms import ProductForm
+from .forms import SweetForm
+
 
 def all_sweets(request):
     """
@@ -71,9 +73,10 @@ def individual_sweet(request, product_id):
     return render(request, 'sweets/individual_sweet.html', context)
 
 
+@login_required
 def user_add_sweets(request):
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = SweetForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully added sweet to shop')
@@ -81,10 +84,47 @@ def user_add_sweets(request):
         else:
             messages.error(request, 'failed to add product!')
     else:
-        form = ProductForm()
-        
+        form = SweetForm()
+
     template = 'sweets/amend_sweets.html'
     context = {
         'form': form
     }
     return render(request, template, context)
+
+
+@login_required
+def edit_sweet(request, product_id):
+    """
+    Edit existing product
+    """
+    sweet = get_object_or_404(Sweet, pk=product_id)
+    if request.method == 'POST':
+        form = SweetForm(request.POST, request.FILES, instance=sweet)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Great changes have been made")
+            return redirect(reverse('sweets:sweet_individual', args=[sweet.id]))
+        else:
+            messages.error(request, 'Hmm something went wrong. Please check the form')
+    else:
+        form = SweetForm(instance=sweet)
+        messages.info(request, f'Your about to edit {sweet.name}')
+
+    template = 'sweets/edit_sweets.html'
+    context = {
+        'form': form,
+        'sweet': sweet
+    }
+    return render(request, template, context)
+
+
+@login_required
+def delete_sweet(request, product_id):
+    """
+    Edit existing product
+    """
+    sweet = get_object_or_404(Sweet, pk=product_id)
+    sweet.delete()
+    messages.success(request, 'Thats that in the bin!')
+    return redirect(reverse('sweets:sweets'))

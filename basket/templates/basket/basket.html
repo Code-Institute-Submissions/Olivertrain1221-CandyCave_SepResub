@@ -71,9 +71,6 @@
                                                                 </span>
                                                             </button>
                                                         </div>
-                                                        {% if item.sweet.measurement_of_sweet %}
-                                                            <input type="hidden" name="sweet_measurement" value="{{ item.size }}">
-                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </form>
@@ -81,7 +78,11 @@
                                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-sweet_measurement="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.sweet.price }}</p>
+                                        {% if item.sweet.sweet_count %}
+                                            <p>£{{ item.sweet.price }}per 100G</p>
+                                        {% else %}
+                                            <p>£{{ item.sweet.price }}</p>
+                                        {% endif %}
                                     </td>
                                 </tr>
                                 {% endfor %}

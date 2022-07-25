@@ -21,7 +21,11 @@
     {% endif %}
     <h5 class="card-text-name">{{ sweet.name }}</h5>
     <p class="card-text">{{ sweet.info }}</p>
-    <p class="card-text">£{{ sweet.price }}per gram</p>
+    {% if sweet.measurement_of_sweet %}
+        <p class="card-text">£{{ sweet.get_display_price }}per 100g</p>
+    {% else %}
+        <p class="card-text">£{{ sweet.price }}</p>
+    {% endif %}
     {% if sweet.rating %}
         <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
     {% else %}
@@ -80,6 +84,12 @@
             {% endwith %}
         </div>
     </form>
+    {% if request.user.is_superuser %}
+        <small>
+            <a class="sweet-management" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</a>
+            <a class="sweet-management" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</a>
+        </small>
+    {% endif %}
 </div>
 <script type="text/javascript">
 

@@ -21,6 +21,7 @@ def basket_items(request):
             sweet = get_object_or_404(Sweet, pk=item_id)
             basket_sum += item_data * sweet.price
             sweet_count += item_data
+            print(item_data)
             basket_selection.append({
                 'item_id': item_id,
                 'quantity': item_data,
@@ -32,6 +33,7 @@ def basket_items(request):
                 sweet_total = int(size) * sweet.price
                 basket_sum += quantity * sweet_total
                 sweet_count += quantity
+                print(item_data)
                 basket_selection.append({
                     'item_id': item_id,
                     'quantity': quantity,

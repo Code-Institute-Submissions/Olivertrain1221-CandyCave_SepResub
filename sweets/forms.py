@@ -3,7 +3,7 @@ from tkinter import E
 from django import forms
 from .models import Sweet, Category
 
-class ProductForm(forms.ModelForm):
+class SweetForm(forms.ModelForm):
 
     class Meta:
         model = Sweet
