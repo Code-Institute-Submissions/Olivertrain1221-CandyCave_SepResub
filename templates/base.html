@@ -140,6 +140,8 @@
           </div>
           {% if messages %}
             <div class="message-container">
+              {% for message in messages %}
+                {% include 'includes/toasts/success.html' %}
             </div>
           {% endif %}
           <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
@@ -171,6 +173,9 @@
   {% endblock %}
 
   {% block postloadjs %}
+  <scripts type="text/javascript">
+    $('.toast').toast('show');
+  </scripts>
   <script src="https://kit.fontawesome.com/d6c0aae822.js" crossorigin="anonymous"></script>
   {% endblock %}
 
