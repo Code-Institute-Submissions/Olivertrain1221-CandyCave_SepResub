@@ -1,5 +1,3 @@
-from socket import fromshare
-from tkinter import E
 from django import forms
 from .models import Sweet, Category
 
