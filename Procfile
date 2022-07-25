@@ -1,0 +1,1 @@
+web: gunicord candy_cave.wsgi:application
