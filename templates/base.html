@@ -138,13 +138,7 @@
               </li>
             </ul>
           </div>
-          {% if messages %}
-            <div class="message-container">
-              {% for message in messages %}
-                {% include 'includes/toasts/success.html' %}
-              {% endfor %}
-            </div>
-          {% endif %}
+          
           <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
             <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
             <button class="btn btn-outline-success" type="submit">Search</button>
