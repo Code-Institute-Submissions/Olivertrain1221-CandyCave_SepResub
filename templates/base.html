@@ -142,6 +142,7 @@
             <div class="message-container">
               {% for message in messages %}
                 {% include 'includes/toasts/success.html' %}
+              {% endfor %}
             </div>
           {% endif %}
           <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
