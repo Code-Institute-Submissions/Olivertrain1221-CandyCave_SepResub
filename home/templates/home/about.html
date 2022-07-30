@@ -23,6 +23,18 @@
                 In our historic shop, which is housed in a building dating back to the early 1600’s, customers young and old recognise the uniqueness of the vast range and display of traditional sweets and the quality of the chocolates and the knowledgeable service they receive. We strongly believe our online sweet shop should not be any different. We provide every order as if it is an important gift. Our sweets or chocolates are packed with care into quality cellophane bags to prevent loss of texture and to stop them sticking as they would in paper bags!
                 <img src="/media/inside_shop.jpg" class="about-images" alt="inside shop">
             </div>
+            <div>
+                <h4>Contact Us</h4>
+                <form action="" method="post">
+                    <table>
+                        {{ form.as_table }}
+                        <tr>
+                            <td type="submit" value="Submit"></td>
+                        </tr>
+                    </table>
+                    {% csrf_token %}
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}
