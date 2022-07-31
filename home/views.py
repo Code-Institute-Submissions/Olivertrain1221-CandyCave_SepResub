@@ -8,6 +8,7 @@ from home.forms import ContactFormForm
 
 # Create your views here.
 
+
 def index(request):
     """
     View that returns index page

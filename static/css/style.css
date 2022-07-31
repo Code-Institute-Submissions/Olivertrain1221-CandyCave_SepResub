@@ -239,12 +239,43 @@ body {
     background-color: red ;
 }
 
+.contact-us {
+    width: 30%;
+    background-color: rgba(15, 175, 159, 0.877);
+    color: rgb(77, 77, 77);
+}
+
+.sweet-container {
+    max-width: 100%;
+}
 
 /* MEDIA QUERIES */
 
 /* Small devices 300px */
-@media (max-width: 320px) {
+@media (min-width: 280px) {
     .nav-logo{
         font-size: 4rem;
     }
+
+    .shop-btn,
+    .basket-header,
+    .nav-link {
+        font-size: 2rem;
+    }
+
+    .basket {
+        font-size: 1rem;
+    }
+
+    .about-text > p {
+        font-size: 2rem;
+    }
+
+    .about-images {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 570px) {    
+
 }

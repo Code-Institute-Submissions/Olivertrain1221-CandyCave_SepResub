@@ -73,3 +73,4 @@ class OrderLineItem(models.Model):
         """
         self.lineitem_total = self.sweet.price * self.quantity
         super().save(*args, **kwargs)
+

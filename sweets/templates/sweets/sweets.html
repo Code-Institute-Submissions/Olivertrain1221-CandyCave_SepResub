@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="row mt-1 mb-2">
+<div class="row mt-1 mb-2 sweet container">
     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
         <div class="sort-select-wrapper w-50">
             <select id="sweet-filter" class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
@@ -30,35 +30,35 @@
         </div>
     </div>
 </div>
-<div class="row justify-content-center w-100">
-    {% for sweet in sweets %}
-    <a href="{% url 'sweets:sweet_individual' sweet.id %}">
-        <div class="card col-xl-2 text-center">
-            {% if sweet.image %}
-                <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
-            {% endif %}
-            <div class="card-body ">
-                <h5 class="card-text-name">{{ sweet.name }}</h5>
-                <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>
-                {% if sweet.measurement_of_sweet %}
-                    <p class="card-text">£{{ sweet.get_display_price }}per 100g</p>
-                {% else %}
-                    <p class="card-text">£{{ sweet.price }}</p>
+<div class="row d-flex justify-content-center w-100">
+        {% for sweet in sweets %}
+        <a href="{% url 'sweets:sweet_individual' sweet.id %}">
+            <div class="card col-xl-2 text-center">
+                {% if sweet.image %}
+                    <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
                 {% endif %}
-                {% if sweet.rating %}
-                    <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
-                {% else %}
-                    <small class="card-text-rating">No Rating</small>
+                <div class="card-body ">
+                    <h5 class="card-text-name">{{ sweet.name }}</h5>
+                    <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>
+                    {% if sweet.measurement_of_sweet %}
+                        <p class="card-text">£{{ sweet.get_display_price }}per 100g</p>
+                    {% else %}
+                        <p class="card-text">£{{ sweet.price }}</p>
+                    {% endif %}
+                    {% if sweet.rating %}
+                        <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
+                    {% else %}
+                        <small class="card-text-rating">No Rating</small>
+                    {% endif %}
+                </div>
+                {% if sweet.category %}
+                    <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
+                    <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
+                    </a>
                 {% endif %}
             </div>
-            {% if sweet.category %}
-                <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
-                <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
-                </a>
-            {% endif %}
-        </div>
-    </a>
-    {% endfor %}
+        </a>
+        {% endfor %}
 </div>
 {% endblock %}
 
