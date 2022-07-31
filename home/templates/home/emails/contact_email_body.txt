@@ -1,0 +1,12 @@
+Hi {{ contact_fname }},
+
+Thankyou for reaching out to the team. Please bear with us!
+We are processing your message: 
+
+{{ message }}
+
+A member of the team will reach out to you shortly
+
+Kind Regards
+Oliver Train
+CEO CANDYCAVE
