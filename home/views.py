@@ -1,4 +1,3 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from urllib3 import HTTPResponse
@@ -6,7 +5,6 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.conf import settings
 from home.forms import ContactFormForm
-from home.models import ContactForm
 
 # Create your views here.
 
