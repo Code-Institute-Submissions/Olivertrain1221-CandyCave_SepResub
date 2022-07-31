@@ -17,6 +17,21 @@ body {
     font-size: 2rem;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 .dropdown-menu {
     width: 18rem;
     border-color: rgb(72, 255, 0);
