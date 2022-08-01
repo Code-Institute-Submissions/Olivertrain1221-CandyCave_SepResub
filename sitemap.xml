@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://candycave.herokuapp.com/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/about/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=squidgy</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=sour</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=hard</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=chocolate</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=wrapped</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=long</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=new_arrivals</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=the_classics</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/basket/basket/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/contact/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/1/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/?category=Squidgy</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/2/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/3/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/4/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/5/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/6/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/7/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/8/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/9/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/10/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/11/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/12/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/13/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/14/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/23/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/15/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/16/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/17/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/18/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/19/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/20/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/21/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://candycave.herokuapp.com/sweets/22/</loc>
+  <lastmod>2022-08-01T22:53:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
