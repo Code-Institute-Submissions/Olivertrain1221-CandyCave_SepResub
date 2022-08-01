@@ -28,13 +28,14 @@
   {% endblock %}
 
   {% block corejs %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://js.stripe.com/v3/">
   </script>
   {% endblock %}
@@ -43,6 +44,8 @@
   {% endblock %}
 
   <title>Candy Cave {% block extra_title %}{% endblock %}</title>
+  <meta name="descrtiption" contents="Sweets Shop Candy Cave England Jars Gifts Sweet Sugar Confectionary">
+  <meta name="keywords" contents="Sweets, Shop, Candy Cave, England, Jars, Gifts, Sweet, Sugar, Confectionary">
 </head>
 
 <body>
@@ -82,7 +85,8 @@
                   {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                   <li>
-                    <a href="{% url 'sweets:amend_sweets' %}" class="dropdown-item nav-theme-dropdown">Sweet Management</a>
+                    <a href="{% url 'sweets:amend_sweets' %}" class="dropdown-item nav-theme-dropdown">Sweet
+                      Management</a>
                   </li>
                   {% endif %}
                   <li>
@@ -144,42 +148,43 @@
               </li>
             </ul>
           </div>
-          
+
           <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
             <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
         <div class="text-center">
-          <div><a class="basket" href="{% url 'basket:view_basket' %}"><i class="fa-solid fa-basket-shopping basket"></i></a>
+          <div><a class="basket" href="{% url 'basket:view_basket' %}"><i
+                class="fa-solid fa-basket-shopping basket"></i></a>
           </div>
           <p class="my-0 basket">
             {% if grand_total %}
-              ${{ grand_total|floatformat:2 }}
+            ${{ grand_total|floatformat:2 }}
             {% else %}
-              $0.00
+            $0.00
             {% endif %}
           </p>
         </div>
     </nav>
   </header>
   {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
     {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
 
 
   {% block page_header %}
@@ -187,93 +192,53 @@
 
   {% block content %}
   {% endblock %}
-  
-  {% block footer %}
-      <!-- Footer -->
-<footer class="page-footer font-small purple footer">
-
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
-
+  <footer class="bg-white">
+    <div class="mt-4 container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <p class="font-italic text-muted">Taking the candy... out of the cave</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="{% url 'sweets:sweets' %}" class="text-muted">All Sweets</a></li>
+            <li class="mb-2"><a href="{% url 'sweets:sweets' %}?sort=price&direction=asc" class="text-muted">By Price</a></li>
+            <li class="mb-2"><a href="{% url 'sweets:sweets' %}?sort=rating&direction=desc" class="text-muted">By Rating</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Sweety Stores</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="{% url 'account_login' %}" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-muted">Signup</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">SignUp Here</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
 
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-  </div>
-  {% endblock %}
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2022 CandyCave All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   {% block postloadjs %}
   <script type="text/javascript">
