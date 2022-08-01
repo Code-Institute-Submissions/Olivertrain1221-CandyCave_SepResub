@@ -1,108 +1,97 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Candy Cave
 
-Welcome USER_NAME,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Candy Cave shop is a website built using the framework Django and using languages such as Python, Javascript, HTML and CSS. The site is a fully functioning ECommerce site for a fictional shop called “Candy Cave” The shop is aimed to be a modern take on an old school sweet shop during the “disco earer” the idea is the user can navigate the site and find sweets and get them added to a basket and delivered to there door. With all the niceties of a fully functioning shop.
+The users are able to select different measurements of sweets in grams and are then able to also order 2 lots of seperate 100g this is perfect for someone who likes a variation or may even be thinking of doing a gift bag etc etc.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The site also shows reviews left by valid customers which is important for the site to be successful as a ecommerce store.
 
-## Gitpod Reminders
+This is the fifth project for the Code Institute Diploma in Software Development with eCommerce.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, Blog Posts and Categories along with Reviews and Responses.
 
-`python3 -m http.server`
+![Screenshot of homepage]()
 
-A blue button should appear to click: _Make Public_,
+[View the live website on Heroku](https://candycave-computers.herokuapp.com/)
 
-Another blue button should appear to click: _Open Browser_.
+Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Table of Contents
+- [candycave Computers](#candycave-computers)
+  * [Introduction](#introduction)
+  * [Table of Contents](#table-of-contents)
+  * [UX](#ux)
+    + [Overall Goals](#overall-goals)
+    + [The Strategy Plane](#the-strategy-plane)
+    + [The Sites Ideal User](#the-sites-ideal-user)
+    + [Site Goals](#site-goals)
+    + [Epics](#epics)
+    + [User Stories](#user-stories)
+    + [The Scope Plane](#the-scope-plane)
+    + [The Structure Plane](#the-structure-plane)
+    + [The Skeleton Plane](#the-skeleton-plane)
+      + [Wireframe mock-ups](#wireframe-mock-ups)
+      + [Database Schema](#database-schema)
+      + [SEO Considerations](#seo-considerations)
+  * [The Surface Plane](#the-surface-plane)
+  * [Features](#features)
+  * [Future Enhancements](#future-enhancements)
+  * [Social Media](#social-media-marketing)
+  * [Testing](#testing)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
+  * [Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
+## UX
 
-Another blue button should appear to click: _Open Browser_.
+### Overall Goals
+* To provide an ecommerce solution for a small business selling sweets to consumers - B2C
+* To enable business employees to maintain and update the site content in line with their needs easily.
+* To provide users with a simple product selection and purchase experience.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<br>
 
-To log into the Heroku toolbelt CLI:
+### The Strategy Plane
+* Candy Cave is a business to consumer B2C ecommerce site for users. The overall design of the site is intended to provide users with a clean and easy to navigate environment whilst providing the level of detail required for the different types of products.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### The Sites Ideal User
+* Sweet enthusiast searching for any sweets they may of had on the past and try new.
+* Someone looking to gift someone.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Site Goals
 
-------
+* To provide users with a place to purchase their sugary needs
+* To promote the product range of sweets Candy Cave has on the market
+* To provide easy navigation with a fun theme to entice all ages in
 
-## Release History
+### Epics
+5 Epics were created which were then further developed into 15 User Stories. The details on each epic, along with the user stories linked to each one can be found in the project kanban board [here](https://github.com/Olivertrain1221/CandyCave/issues)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+1. Initial Django setup [#1](https://github.com/Olivertrain1221/CandyCave/issues/1)
+2. Fulfilling the sites intention and build as a shop [#2](https://github.com/Olivertrain1221/CandyCave/issues/2)
+3. Account Functionality [#3](https://github.com/Olivertrain1221/CandyCave/issues/3)
+4. Account Login/Logout [#4](https://github.com/Olivertrain1221/CandyCave/issues/4)
+5. Users Shopping Basket [#5](https://github.com/Olivertrain1221/CandyCave/issues/5)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### User Stories
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+From the Epics,I developed 15 user stories; however I feel that more were required for the size of the site that this is. From the stories that I did create I managed to nearly complete them all however due to the time constrains regarding my lack of experience with Django, Plus the time required to plan and design the project. I was unable to complete a few or the stories.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The stories also consisted of tasks within the stories due to me finding that a suitable user story required multiple elements in order to satisfy the overall picture. I found by adding the tasks that I was able to then successfully complete the stories and ensure that i had thought of the bigger picture.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+1. Navigation Around the Site [#1](https://github.com/Olivertrain1221/CandyCave/issues/6)
+2. Clear Pricing [#2]https://github.com/Olivertrain1221/CandyCave/issues/7)
+3. Login To My Account [#3](https://github.com/Olivertrain1221/CandyCave/issues/8)
+4. Product Accessibility [#4](https://github.com/Olivertrain1221/CandyCave/issues/9)
+5. Pre-populate the site with products [#5](https://github.com/Olivertrain1221/CandyCave/issues/10)
+6. Responsive Templates [#6](https://github.com/Olivertrain1221/CandyCave/issues/11)
+7. Can Delete there Profile [#7](https://github.com/Olivertrain1221/CandyCave/issues/12)
+8. Deployment to Heroku [#8](https://github.com/Olivertrain1221/CandyCave/issues/13)
+9. Logout [#9](https://github.com/Olivertrain1221/CandyCave/issues/14)
+10. Add to Basket [#10](https://github.com/Olivertrain1221/CandyCave/issues/15)
+11. Wish List [#11](https://github.com/Olivertrain1221/CandyCave/issues/16)
+12. Payment [#12](https://github.com/Olivertrain1221/CandyCave/issues/17)
+13. Email Order Confirmation [#13](https://github.com/Olivertrain1221/CandyCave/issues/18)
+14. Contact Us [#14](https://github.com/Olivertrain1221/CandyCave/issues/19)
+15. Product Display [#15](https://github.com/Olivertrain1221/CandyCave/issues/20)
