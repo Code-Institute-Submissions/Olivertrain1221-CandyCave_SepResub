@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-black text-white">
+            <div>
+                <a href="{% url 'blog:add_post' %}">Add A Post</a>
+            </div>
+            <div class="row d-flex justify-content-center w-100">
+                {% for post in blog_posts %}
+                    <a  class="m-4" href="{% url 'blog:blog_post_details' post.slug %}">
+                        <div class="m-4 card col-xl-2 text-center">
+                            <div class="card-body">
+                                <h5 class="card-text-name">{{ post.title }}</h5>
+                                <p class="card-text">{{ post.body|truncatechars:100 }}</p>
+                                <p class="card-text">{{ post.author }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

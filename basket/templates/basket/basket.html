@@ -78,11 +78,7 @@
                                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-sweet_measurement="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        {% if item.sweet.sweet_count %}
-                                            <p>£{{ item.sweet.price }}per 100G</p>
-                                        {% else %}
-                                            <p>£{{ item.sweet.price }}</p>
-                                        {% endif %}
+                                        <p>£{{ sweet_total }}</p>
                                     </td>
                                 </tr>
                                 {% endfor %}

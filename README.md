@@ -95,3 +95,4 @@ The stories also consisted of tasks within the stories due to me finding that a 
 13. Email Order Confirmation [#13](https://github.com/Olivertrain1221/CandyCave/issues/18)
 14. Contact Us [#14](https://github.com/Olivertrain1221/CandyCave/issues/19)
 15. Product Display [#15](https://github.com/Olivertrain1221/CandyCave/issues/20)
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="">
+    <div class="post">
+        <div class="card col-xl-2 text-center">
+            <div class="card-body">
+                <h5 class="card-text-name">{{ post.title }}</h5>
+                <p class="card-text">{{ post.body|truncatechars:100 }}</p>
+                <p class="card-text">{{ post.author }}</p>
+            </div>
+        </div>
+        {% if user == post.author %}
+            <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'blog:edit_post' post.slug %}">Update</a>
+            <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'blog:delete_post' post.slug %}">Delete</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row bg-profile justify-content-center">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'sweets:edit_sweet' sweet.id %}" class="form mb-1" enctype="multipart/form-data">
                     {% csrf_token %}

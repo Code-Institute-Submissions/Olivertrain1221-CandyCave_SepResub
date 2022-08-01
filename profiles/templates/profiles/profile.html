@@ -19,9 +19,9 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row bg-profile">
     <div class="col-12 col-lg-6">
-        <p>Default Delivery Infor</p>
+        <p>Default Delivery Information</p>
         <form action="{% url 'profile:profile' %}" method="POST" id="profile-form-update">
             {% csrf_token %}
             {{ form|crispy }}

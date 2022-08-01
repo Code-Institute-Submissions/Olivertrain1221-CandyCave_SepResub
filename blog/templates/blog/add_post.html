@@ -15,20 +15,17 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Amend Products</h2>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row bg-profile justify-content-center">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'sweets:amend_sweets' %}" class="form mb-1" enctype="multipart/form-data">
+                {% if post %}
+                    <h2>Edit Blog Post</h2>
+                {% else %}
+                    <h2>Add Blog Post</h2>
+                {% endif %}
+                <form method="POST" action="{% if post %}{% url 'blog:edit_post' post.slug %}{% else %}{% url 'blog:add_post' %}{% endif %}" class="form mb-1" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn" href="{% url 'sweets:sweets' %}">Cancel</a>
-                        <button class="btn" type="submit">Add a Sweet</button>
+                        <button type="submit" class="btn btn-primary mt-2">{% if post %}Save Changes{% else %}Add Blog Post{% endif %}</button>
                     </div>
                 </form>
             </div>

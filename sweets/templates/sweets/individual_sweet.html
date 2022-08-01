@@ -33,19 +33,19 @@
     {% endif %}
     <form class="form" action="{% url 'basket:add_items_to_basket' sweet.id %}" method="POST">
         {% csrf_token %}
-        <div class="form-row">
+        <div class="form-row mb-4">
             {% with sweet.measurement_of_sweet as m %}
-            {% if m %}
-                <div class="col-11">
-                    <p>Measurement of SUGARNESS</p>
-                    <select class="form-control rounded-0 w-50" name="sweet_measurement" id="id_sweet_measurement">
-                        <option value="100">100G</option>
-                        <option value="150">150g</option>
-                        <option value="200">200g</option>
-                        <option value="250">250g</option>
-                    </select>
-                </div>
-            {% endif %}
+                {% if m %}
+                    <div class="col-11">
+                        <p>Measurement of SUGARNESS</p>
+                        <select class="form-control rounded-0 w-50" name="sweet_measurement" id="id_sweet_measurement">
+                            <option value="100">100G</option>
+                            <option value="150">150g</option>
+                            <option value="200">200g</option>
+                            <option value="250">250g</option>
+                        </select>
+                    </div>
+                {% endif %}
             <div class="col-12">
                 <p class="mt-3"><strong>Quantity:</strong></p>
                 <div class="form-group w-50">
@@ -85,10 +85,12 @@
         </div>
     </form>
     {% if request.user.is_superuser %}
-        <small>
-            <a class="sweet-management" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</a>
-            <a class="sweet-management" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</a>
-        </small>
+        <div class="m-4">
+            <small>
+                <a class="btn-lg btn-success" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</a>
+                <a class="btn-lg btn-danger" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</a>
+            </small>
+        </div>
     {% endif %}
 </div>
 <script type="text/javascript">

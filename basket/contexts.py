@@ -8,7 +8,7 @@ def basket_items(request):
     """
     Shows the basket items available to all templates
     """
-    sweet_calculated_price = []
+    sweet_total_price = 0
     quantity = 0
     basket_selection = []
     basket_sum = 0
@@ -21,7 +21,6 @@ def basket_items(request):
             sweet = get_object_or_404(Sweet, pk=item_id)
             basket_sum += item_data * sweet.price
             sweet_count += item_data
-            print(item_data)
             basket_selection.append({
                 'item_id': item_id,
                 'quantity': item_data,
@@ -30,15 +29,16 @@ def basket_items(request):
         else:
             for size, quantity in item_data['items_by_size'].items():
                 sweet = get_object_or_404(Sweet, pk=item_id)
-                sweet_total = int(size) * sweet.price
-                basket_sum += quantity * sweet_total
+                sweet_total_price = int(size) * sweet.price
+                basket_sum += quantity * sweet_total_price
                 sweet_count += quantity
-                print(item_data)
+                print(size)
                 basket_selection.append({
                     'item_id': item_id,
                     'quantity': quantity,
                     'sweet': sweet,
                     'size': size,
+                    'sweet_total_price': sweet_total_price
                 })
 
     if basket_sum < settings.FREE_POSTAGE_PRICE:
@@ -55,6 +55,7 @@ def basket_items(request):
         'basket_sum': basket_sum,
         'sweet_count': sweet_count,
         'post': post,
+        'sweet_total_price': sweet_total_price,
         'free_postage_mark': free_postage_mark,
         'free_postage_price': settings.FREE_POSTAGE_PRICE,
         'grand_total': grand_total,

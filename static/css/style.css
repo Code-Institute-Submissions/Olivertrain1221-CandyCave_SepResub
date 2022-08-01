@@ -228,7 +228,6 @@ body {
     font-size: 4rem;
     color: rgb(255, 0, 225);
     background-color: rgb(61, 59, 61);
-    background-color: rgb(61, 59, 61);
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
@@ -247,6 +246,13 @@ body {
 
 .sweet-container {
     max-width: 100%;
+}
+
+.bg-profile {
+    background-color: rgb(61, 59, 61);
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+    box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
 }
 
 /* MEDIA QUERIES */

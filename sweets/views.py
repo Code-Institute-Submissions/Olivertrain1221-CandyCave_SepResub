@@ -50,7 +50,6 @@ def all_sweets(request):
             sweets = sweets.filter(queries)
 
     sorting_method = f'{sort}_{direction}'
-    print(sorting_method)
 
     context = {
         'sweets': sweets,
