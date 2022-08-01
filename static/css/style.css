@@ -157,6 +157,10 @@ body {
     height: 60px;
 }
 
+.sweet-image-individual {
+    max-width: 75%;
+}
+
 .about-container {
     background-color: rgb(61, 59, 61);
     margin-top: 3rem;
@@ -165,6 +169,12 @@ body {
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
+}
+
+.footer {
+    background-color: rgb(61, 59, 61);
+    z-index: 2;
+    color: rgb(255 0 247);
 }
 
 .about-text {
