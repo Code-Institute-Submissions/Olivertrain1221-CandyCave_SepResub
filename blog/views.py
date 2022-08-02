@@ -74,6 +74,7 @@ def BlogPostEdit(request, slug):
 
     return render(request, 'blog/add_post.html', context)
 
+
 def deletePost(request, slug):
     '''
     View to handle the deletion of a blog post
