@@ -309,6 +309,16 @@ body {
     color: rgb(77, 77, 77);
 }
 
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    color: rgb(255 0 247);
+}
+
 .sweet-container {
     max-width: 100%;
 }
@@ -321,7 +331,6 @@ body {
 }
 
 /* MEDIA QUERIES */
-
 /* Small devices 300px */
 @media (min-width: 280px) {
     .nav-logo{
