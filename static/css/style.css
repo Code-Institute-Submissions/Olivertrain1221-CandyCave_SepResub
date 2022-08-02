@@ -4,6 +4,9 @@ body {
     color: rgb(255 0 247);
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* NAV CSS */
@@ -166,6 +169,7 @@ body {
     margin-top: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-bottom: 80px;
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
@@ -269,8 +273,13 @@ body {
     background-color: red ;
 }
 
+.container-for-footer {
+    flex-grow: 1;
+}
+
 .contact-us {
     width: 30%;
+    margin-bottom: 20px;
     background-color: rgba(15, 175, 159, 0.877);
     color: rgb(77, 77, 77);
 }
