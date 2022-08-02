@@ -223,8 +223,33 @@ body {
     margin-top: 10px;
 }
 
+.my-footer-links {
+    color: rgb(153, 170, 255);
+    font-size: 22px;
+}
+
+.footer-form-sub {
+    color: rgb(255, 0, 225);
+    font-size: 20px;
+}
+.green-footer {
+    color: rgb(72, 255, 0);
+    font-size: 30px;
+}
+
+.chimp {
+    background-color: rgba(135, 9, 131, 0.332);
+}
+
+.footer-outer-container {
+    background-color: rgba(104, 34, 112, 0.677);
+    height: min-content;
+}
+
 .card {
     max-width: 22rem;
+    min-width: 21rem;
+    min-height: 369px;
     border-radius: 2rem;
     justify-content: center;
     border-width: thick;

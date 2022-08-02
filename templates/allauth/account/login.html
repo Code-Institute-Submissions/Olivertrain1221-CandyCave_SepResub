@@ -1,12 +1,12 @@
 {% extends "account/base.html" %}
-
+{% load static %}
 {% load i18n %}
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
-
+<div class="test">
 <hr>
 <h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
 <hr>
@@ -48,4 +48,5 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   </p>
 </form>
 
+</div>
 {% endblock %}
