@@ -9,18 +9,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
   {% endblock %}
-
+  
   {% block extra_meta %}
   {% endblock %}
-
+  
   {% block corecss %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
 
   {% endblock %}
 
@@ -217,37 +219,52 @@
             <li class="mb-2"><a href="{% url 'account_signup' %}" class="text-muted">Signup</a></li>
           </ul>
         </div>
-        <div class="col-lg-4 col-md-6 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-          <p class="text-muted mb-4">SignUp Here</p>
-          <div class="p-1 rounded border">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-              </div>
+        <!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="https://herokuapp.us12.list-manage.com/subscribe/post?u=8b00e9a876ce5a8deef7c5c94&amp;id=7132f3b8ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Subscribe</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear foot">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8b00e9a876ce5a8deef7c5c94_7132f3b8ab" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <p class="brandingLogo"><a href="http://eepurl.com/h7V_E5" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+</div>
+</div>
 
-    <!-- Copyrights -->
-    <div class="bg-light py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0 py-2">© 2022 CandyCave All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+<!-- Copyrights -->
+<div class="bg-light py-4">
+  <div class="container text-center">
+    <a href="https://www.privacypolicygenerator.info/live.php?token=ozARu6M33OX0cRUxqUEyQHYK2yTOK6mt"><p class="text-muted mb-0 py-2">© 2022 CandyCave All rights reserved.</p></a>
+  </div>
+</div>
+</footer>
 
-  {% block postloadjs %}
+{% block postloadjs %}
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   <script type="text/javascript">
-    $('.toast').toast('show');
+  $('.toast').toast('show');
   </script>
   <script src="https://kit.fontawesome.com/d6c0aae822.js" crossorigin="anonymous"></script>
   {% endblock %}
-
-
+  
+  
 </body>
 
 </html>
