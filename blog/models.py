@@ -11,7 +11,7 @@ class Posts(models.Model):
     author = models.ForeignKey(User,null=False, blank=False, on_delete=models.SET_DEFAULT, default=1)
     body = models.TextField(max_length=10000)
     slug = models.SlugField(max_length=128, unique=True)
-    
+
     def __str__(self):
         return self.title
 

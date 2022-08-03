@@ -248,7 +248,7 @@ body {
 
 .card {
     max-width: 22rem;
-    min-width: 21rem;
+    min-width: 300px;
     min-height: 369px;
     border-radius: 2rem;
     justify-content: center;
@@ -275,6 +275,18 @@ body {
     color: rgb(255, 0, 225)
 }
 
+.card-text-name-blog {
+    color: rgb(236, 4, 4);
+    font-size: 30px;
+    margin: 10px;
+}
+
+
+
+.card-text-author {
+    font-size: 30px;
+    color: rgb(153, 170, 255);
+}
 /* Shopping Basket styling */
 .basket-header {
     text-align: center;
@@ -330,8 +342,34 @@ body {
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
 }
 
+.blog-hero-add {
+    color: rgb(72, 255, 0);
+    font-size: 4rem;
+    background-color: rgb(61, 59, 61);
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+}
+
+.blog-hero {
+    font-size: 4rem;
+    color: rgb(255, 0, 225);
+    background-color: rgb(61, 59, 61);
+    border-radius: 1rem;
+    border-color: rgb(72, 255, 0);
+}
+
 /* MEDIA QUERIES */
+@media (max-width: 1300px) {
+    .blog-hero {
+        font-size: 2rem;
+    }
+}
+
+
 /* Small devices 300px */
+
+
+
 @media (min-width: 280px) {
     .nav-logo{
         font-size: 4rem;

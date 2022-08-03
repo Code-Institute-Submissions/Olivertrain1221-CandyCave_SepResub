@@ -24,7 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="s3://candycave/media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="s3://candycave/media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="s3://candycave/media/favicon-16x16.png">
   {% endblock %}
 
   {% block extra_css %}
@@ -56,8 +58,8 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg nav-background mw-100">
-      <div class="container-fluid mw-100">
+    <nav class="navbar navbar-expand-lg nav-background">
+      <div class="container-fluid d-flex justify-content-center mw-100">
         <div class="row">
           <div class="col nav-col">
             <a class="navbar-brand m-1 nav-logo" href="{% url 'home:home' %}">CandyCave</a>
@@ -69,7 +71,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col d-flex justify-content-center">
           <div class="justify-content-center collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
