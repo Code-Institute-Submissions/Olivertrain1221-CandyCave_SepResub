@@ -21,31 +21,33 @@
     {% endif %}
     <h5 class="card-text-name">{{ sweet.name }}</h5>
     <p class="card-text">{{ sweet.info }}</p>
+    
     {% if sweet.measurement_of_sweet %}
-        <p class="card-text">£{{ sweet.get_display_price }}per 100g</p>
+        <p class="card-text">£{{ sweet_total_price }}</p>
     {% else %}
         <p class="card-text">£{{ sweet.price }}</p>
     {% endif %}
+    
     {% if sweet.rating %}
         <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
     {% else %}
-    <small class="card-text-rating">No Rating</small>
+        <small class="card-text-rating">No Rating</small>
     {% endif %}
     <form class="form" action="{% url 'basket:add_items_to_basket' sweet.id %}" method="POST">
         {% csrf_token %}
         <div class="form-row mb-4">
             {% with sweet.measurement_of_sweet as m %}
-                {% if m %}
-                    <div class="col-11">
-                        <p>Measurement of SUGARNESS</p>
-                        <select class="form-control rounded-0 w-50" name="sweet_measurement" id="id_sweet_measurement">
-                            <option value="100">100G</option>
-                            <option value="150">150g</option>
-                            <option value="200">200g</option>
-                            <option value="250">250g</option>
-                        </select>
-                    </div>
-                {% endif %}
+            {% if m %}
+                <div class="col-11">
+                    <p>Measurement of SUGARNESS</p>
+                    <select class="form-control rounded-0 w-50" name="sweet_measurement" id="id_sweet_measurement">
+                        <option value="100">100g</option>
+                        <option value="150">150g</option>
+                        <option value="200">200g</option>
+                        <option value="250">250g</option>
+                    </select>
+                </div>
+            {% endif %}
             <div class="col-12">
                 <p class="mt-3"><strong>Quantity:</strong></p>
                 <div class="form-group w-50">

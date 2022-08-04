@@ -9,10 +9,23 @@ body {
     min-height: 100vh;
 }
 
+.nav-container {
+    flex-direction: column;
+}
+
+.search-bar-row {
+    width: 100%;
+}
+
+.search-bar-row form {
+    flex-direction: row;
+}
+
 .search-bar {
     max-width: 50%;
     height: 50px;
     margin: 15px;
+    font-size: 2rem;
 }
 
 /* NAV CSS */
@@ -78,6 +91,16 @@ body {
     border-radius: 2rem;
     margin: 10px;
     max-height: 55%;
+}
+
+.col-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-brand {
+    font-size: 4rem;
+    margin-top: 20px;
 }
 
 .sweet-detail {
@@ -230,7 +253,7 @@ body {
 }
 
 .my-footer-links {
-    color: rgb(153, 170, 255);
+    color: rgb(255, 255, 255);
     font-size: 22px;
 }
 
@@ -250,8 +273,29 @@ body {
     align-items: center;
 }
 
+.footer-logos {
+    font-size: 30px;
+    color: rgb(255, 255, 255)
+}
+
 .chimp {
     background-color: rgba(135, 9, 131, 1);
+}
+
+#sweet-filter {
+    background-color: rgb(44, 44, 44);
+    font-size: 2rem;
+    color: rgb(255, 0, 255);
+    height: 40px;
+    width: 300px;
+}
+
+.form-allauth {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: rgb(44, 44, 44);
 }
 
 .footer-outer-container {
@@ -261,13 +305,15 @@ body {
 
 .card {
     max-width: 22rem;
+    
+    max-height: 370rem;
     min-width: 300px;
     min-height: 369px;
     border-radius: 2rem;
     justify-content: center;
     border-width: thick;
     border-style: solid;
-    margin: 20px;
+    margin: 22px;
     background-color: rgb(61, 59, 61);
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
@@ -288,8 +334,12 @@ body {
     color: rgb(255, 0, 255)
 }
 
+.card-blog-title {
+    color: rgb(0, 255, 255);
+}
+
 .card-text-name-blog {
-    color: rgb(236, 4, 4);
+    color: rgb(0, 255, 255);
     font-size: 30px;
     margin: 10px;
 }
@@ -327,11 +377,17 @@ body {
     flex-grow: 1;
 }
 
+.subscribe-text {
+    font-size: 2rem;
+}
+
 .contact-us {
-    width: 30%;
+    width: 300px;
+    max-width: 50%;
     margin-bottom: 20px;
-    background-color: rgba(15, 175, 159, 0.877);
-    color: rgb(77, 77, 77);
+    background-color: rgba(157, 52, 249, 0.877);
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
 }
 
 .dropdown-menu>li>a {
@@ -371,22 +427,27 @@ body {
     border-color: rgb(72, 255, 0);
 }
 
-/* MEDIA QUERIES */
+.about-images {
+    max-width: 80%;
+}
+
+/* 
+MEDIA QUERIES
 @media (max-width: 1300px) {
     .blog-hero {
         font-size: 2rem;
     }
-    .nav-theme {
-        font-size: 3rem;
+    .nav-link {
+        font-size: 2rem;
     }
-}
+} */
 
 
 /* Small devices 300px */
+/* 
 
 
-
-@media (max-width: 280px) {
+@media (min-width: 1000px) {
     .nav-logo{
         font-size: 4rem;
     }
@@ -409,4 +470,4 @@ body {
         max-width: 80%;
     }
 }
-
+ */

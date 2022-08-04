@@ -14,22 +14,33 @@ def basket_items(request):
     basket_sum = 0
     sweet_count = 0
     size = 0
+    sweet_total_price = 0
     basket = request.session.get('basket', {})
 
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
+            print("SWEET WITH NO SIZE")
             sweet = get_object_or_404(Sweet, pk=item_id)
+            print(sweet, "sweet")
             basket_sum += item_data * sweet.price
+            print(sweet.price)
+            print(item_data, "item_data")
             sweet_count += item_data
+            print(sweet_count, "sweet_count")
             basket_selection.append({
                 'item_id': item_id,
                 'quantity': item_data,
                 'sweet': sweet,
             })
+            print("END OF SWEET WITH NO SIZE")
         else:
             for size, quantity in item_data['items_by_size'].items():
+                print("START SWEET WITH SIZE")
                 sweet = get_object_or_404(Sweet, pk=item_id)
                 sweet_total_price = int(size) * sweet.price
+                print(sweet_total_price, "sweet_total_price")
+                print(size, "size")
+                print(sweet.price, "sweet.price")
                 basket_sum += quantity * sweet_total_price
                 sweet_count += quantity
                 print(size)
@@ -40,6 +51,7 @@ def basket_items(request):
                     'size': size,
                     'sweet_total_price': sweet_total_price
                 })
+                print("END OF SWEET WITH SIZE")
 
     if basket_sum < settings.FREE_POSTAGE_PRICE:
         post = basket_sum * Decimal(settings.DELIVERY_PERCENTAGE / 100)

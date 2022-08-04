@@ -14,7 +14,7 @@
     <div class="container-fluid container-for-footer">
         <div class="row d-flex justify-content-center text-center about-container">
             <div class="d-flex text-center about-text flex-wrap">
-                <p>
+                <p class="m-3">
                     Welcome to the about page here we can entice you, tease you,<br>and most importantly<br>PLEASE YOU<br>
                     Delivering Since 1827 
                     The world famous Oldest Sweet Shop first opened its doors in 1827 and today is still selling and delivering quality traditional sweets and chocolates. 
@@ -22,18 +22,16 @@
                     From traditional old fashioned sweets such as humbugs, aniseed balls, pear drops, jelly babies to more recent additions “retro sweets” including cola bottles, popping candy and kola cubes. 
                 </p>
                 <img class="about-images" src="{{ MEDIA_URL }}sweet_jars.jpg" class="" alt="Candy Gifts Sugar Cave Sweets Confectionary Jars Sweet Jars">
-                <p>    
+                <p class="m-3">    
                     Most of our sweets are still crafted in the original way in England.  The boiling’s being done in copper pans and using sweet moulds quite often over a century old! 
                     We sell locally handmade fudge and our superb chocolate range is sourced from the finest chocolatiers in Belgium and Switzerland. 
                     In our historic shop, which is housed in a building dating back to the early 1600’s, customers young and old recognise the uniqueness of the vast range and display of traditional sweets and the quality of the chocolates and the knowledgeable service they receive. We strongly believe our online sweet shop should not be any different. We provide every order as if it is an important gift. Our sweets or chocolates are packed with care into quality cellophane bags to prevent loss of texture and to stop them sticking as they would in paper bags!
                 </p>
                 <img src="{{ MEDIA_URL }}inside_shop.jpg" class="about-images" alt="Sweet Shop Candy Cave Confectionary Sugar Gifts inside shop">
-                <div>
-                    <h4>Can't get enough? Subscribe to our Subscriber</h4>
-                </div>
             </div>
-            <div class="mt-4">
-                <h4>Or needing something else? Contact us Below!</h4>
+            <div>
+                <p class="subscribe-text">Can't get enough? Subscribe to our Subscriber</p>
+                <p class="subscribe-text">Or needing something else? Contact us Below!</p>
                 <br>
                 <a href="{% url 'home:contact-us' %}">
                     <button class="btn contact-us" >Contact Us Here!</button>
