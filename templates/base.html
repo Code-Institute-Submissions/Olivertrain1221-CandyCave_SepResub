@@ -25,8 +25,8 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css">
   <link rel="apple-touch-icon" sizes="180x180" href="s3://candycave/media/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="s3://candycave/media/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="s3://candycave/media/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://candycave.s3.eu-west-2.amazonaws.com/media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://candycave.s3.eu-west-2.amazonaws.com/media/favicon-16x16.png">
   {% endblock %}
 
   {% block extra_css %}
@@ -88,7 +88,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-expanded="false">Account<i class="fa-solid fa-user m-1"></i></a>
+                  data-toggle="dropdown" aria-label="Shop" aria-expanded="false">Account<i class="fa-solid fa-user m-1"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
@@ -114,7 +114,7 @@
                 </ul>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button"
-                  data-toggle="dropdown" aria-expanded="false">
+                  data-toggle="dropdown" aria-expanded="false" aria-label="Shop">
                   Shop<i class="fa-solid fa-bag-shopping m-1"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -1,7 +1,7 @@
 body {
     font-family: 'Bebas Neue', cursive;
     height: 100%;
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     background: url('/media/background.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -11,12 +11,12 @@ body {
 
 /* NAV CSS */
 .nav-theme {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     font-size: 3rem;
 }
 
 .nav-theme-dropdown {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     font-size: 2rem;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .table-checkout {
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     width: 100%;
     border-radius: 2rem;
     border-color: rgb(72, 255, 0);
@@ -59,7 +59,7 @@ body {
 .main-product-container {
     margin: 1rem;
     border-radius: 2rem;
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -81,7 +81,7 @@ body {
     border-width: thick;
     border-style: solid;
     margin: 20px;
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
 }
@@ -91,7 +91,7 @@ body {
 }
 
 .sort-bar {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     font-size: 1rem;
     border-radius: 2rem;
     border-color: rgb(72, 255, 0);
@@ -100,20 +100,20 @@ body {
 }
 
 .current-fields {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
 }
 .nav-logo {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     font-size: 5rem;
 }
 
 .nav-background {
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
 }
 
 /* Index page CSS */
 .index-slogan {
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     font-size: 3rem;
     display: flex;
     justify-content: center;
@@ -122,8 +122,8 @@ body {
 }
 
 .shop-btn {
-    background-color: rgba(61, 59, 61, 0.485);
-    color: rgb(255 0 247);
+    background-color: rgba(44, 44, 44, 0.485);
+    color: rgb(255 0 255);
     font-size: 3rem;
 }
 
@@ -135,7 +135,7 @@ body {
 .basket {
     font-size: 3rem;
     text-decoration: none;
-    color: rgb(255, 0, 225);
+    color: rgb(255, 0, 255);
 }
 
 .delivery-banner {
@@ -147,7 +147,7 @@ body {
     max-width: 50%;
 }
 .dropdown-menu {
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
 }
 
 .navbar-toggler {
@@ -155,7 +155,7 @@ body {
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
     text-align: center;
     height: 60px;
 }
@@ -165,7 +165,7 @@ body {
 }
 
 .about-container {
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     margin-top: 3rem;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -185,11 +185,11 @@ body {
 
 
   #button-addon1 {
-    color: rgb(255, 0, 225);
+    color: rgb(255, 0, 255);
   }
   
   i {
-    color: rgb(255, 0, 225);
+    color: rgb(255, 0, 255);
   }
   
   .form-control::placeholder {
@@ -229,7 +229,7 @@ body {
 }
 
 .footer-form-sub {
-    color: rgb(255, 0, 225);
+    color: rgb(255, 0, 255);
     font-size: 20px;
 }
 .green-footer {
@@ -272,7 +272,7 @@ body {
 
 .card-text {
     font-size: 30px;
-    color: rgb(255, 0, 225)
+    color: rgb(255, 0, 255)
 }
 
 .card-text-name-blog {
@@ -291,15 +291,15 @@ body {
 .basket-header {
     text-align: center;
     font-size: 5rem;
-    color: rgb(255, 0, 225);
+    color: rgb(255, 0, 255);
 }
 
 .basket-empty {
     margin-top: 30px;
     text-align: center;
     font-size: 4rem;
-    color: rgb(255, 0, 225);
-    background-color: rgb(61, 59, 61);
+    color: rgb(255, 0, 255);
+    background-color: rgb(44, 44, 44);
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
@@ -328,7 +328,7 @@ body {
     font-weight: 400;
     line-height: 1.42857143;
     white-space: nowrap;
-    color: rgb(255 0 247);
+    color: rgb(255 0 255);
 }
 
 .sweet-container {
@@ -336,7 +336,7 @@ body {
 }
 
 .bg-profile {
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
     box-shadow: 2px 2px 8px 8px rgba(0, 255, 76, 0.334), 0 6px 20px 0 rgba(0, 255, 34, 0.334);
@@ -345,15 +345,15 @@ body {
 .blog-hero-add {
     color: rgb(72, 255, 0);
     font-size: 4rem;
-    background-color: rgb(61, 59, 61);
+    background-color: rgb(44, 44, 44);
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
 }
 
 .blog-hero {
     font-size: 4rem;
-    color: rgb(255, 0, 225);
-    background-color: rgb(61, 59, 61);
+    color: rgb(255, 0, 255);
+    background-color: rgb(44, 44, 44);
     border-radius: 1rem;
     border-color: rgb(72, 255, 0);
 }
@@ -370,7 +370,7 @@ body {
 
 
 
-@media (min-width: 280px) {
+@media (max-width: 280px) {
     .nav-logo{
         font-size: 4rem;
     }
@@ -394,6 +394,3 @@ body {
     }
 }
 
-@media (min-width: 570px) {    
-
-}
