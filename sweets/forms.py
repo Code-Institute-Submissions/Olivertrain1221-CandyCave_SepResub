@@ -1,6 +1,7 @@
 from django import forms
 from .models import Sweet, Category
 
+
 class SweetForm(forms.ModelForm):
 
     class Meta:

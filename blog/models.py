@@ -8,7 +8,8 @@ class Posts(models.Model):
     Users Posts
     """
     title = models.CharField(max_length=250)
-    author = models.ForeignKey(User,null=False, blank=False, on_delete=models.SET_DEFAULT, default=1)
+    author = models.ForeignKey(User, null=False, blank=False,
+                               on_delete=models.SET_DEFAULT, default=1)
     body = models.TextField(max_length=10000)
     slug = models.SlugField(max_length=128, unique=True)
 

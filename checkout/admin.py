@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from .models import Order, OrderLineItem
 
+
 class OrderLineItemAdminInLine(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
@@ -28,7 +29,5 @@ class OrderAdmin(admin.ModelAdmin):
                     'grand_total',)
 
     ordering = ('-date',)
-
-
 
 admin.site.register(Order, OrderAdmin)

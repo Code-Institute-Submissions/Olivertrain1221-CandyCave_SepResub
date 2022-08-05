@@ -103,9 +103,10 @@ def edit_sweet(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Great changes have been made")
-            return redirect(reverse('sweets:sweet_individual', args=[sweet.id]))
+            return redirect(reverse('sweets:sweet_individual',
+                                    args=[sweet.id]))
         else:
-            messages.error(request, 'Hmm something went wrong. Please check the form')
+            messages.error(request, 'Please check the form again!')
     else:
         form = SweetForm(instance=sweet)
         messages.info(request, f'Your about to edit {sweet.name}')

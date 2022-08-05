@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Sweet, Category
 
+
 class SweetAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -11,6 +12,7 @@ class SweetAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (

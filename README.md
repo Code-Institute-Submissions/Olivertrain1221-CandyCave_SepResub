@@ -216,15 +216,15 @@ As the User that made the post its important that i can edit the post and delete
 <br>
 
 #### Acceptance Criteria
-Given that I am a logged in employee, When I view a blog post, Then I have the option to edit it
-Given that I am a logged in employee, When I select the option to edit a blog post, Then I am taken to a form with the blog post information in it so I can edit the section I want
-Given that I am a logged in employee, When I edit a blog post, Then on submitting the edited form the blog post is updated
+Given that I am a logged in, When I view a blog post, Then I have the option to edit it
+Given that I am a logged in, When I select the option to edit a blog post, Then I am taken to a form with the blog post information in it so I can edit the section I want
+Given that I am a logged in, When I edit a blog post, Then on submitting the edited form the blog post is updated
 
 <br>
 
 #### Implementation
-Develop the option for employees to edit blog posts
-Develop a form for employees to edit the blog post
+Develop the option for users to edit blog posts
+Develop a form for users to edit the blog post
 Develop validation for the form to ensure blog post information is complete
 
 <br>
@@ -245,25 +245,24 @@ Develop a blog post page to display all the blog posts
 Develop blog post cards to display a summary of each post
 Develop a blog post detail page to display the full post
 Link the blog card to the detail page for each blog post
-Display the blog posts in date order, most recent first
 
 <br>
 
 #### Delete Blog Post 
-As a Employee, I would like to be able to delete a blog post, so that in the event we need to remove one completely we can take it down from the site
+As The user that made the post, I would like to be able to delete a blog post, so that in the event we need to remove one completely we can take it down from the site
 
 <br>
 
 #### Acceptance Criteria
-Given that I am a logged in employee, When I navigate to a blog post, Then I have the option to remove the post
-Given that I am a logged in employee, When I select the remove option on a blog post, Then the post is removed from the site
+Given that I am a logged in, When I navigate to a blog post, Then I have the option to remove the post
+Given that I am a logged in, When I select the remove option on a blog post, Then the post is removed from the site
 
 <br>
 
 #### Implementation
 Develop an option in the blog post edit page to delete the post
 Develop the functionality to delete the post from the database
-Restrict access to the functionality to employee users
+Restrict access to the functionality to users
 
 <br>
 
@@ -287,7 +286,7 @@ Prevent multiple accounts being created for the same email address
 <br>
 
 #### Edit Account 
-As a User, I would like to be able to edit the details/address stored on my account, so that If I move, or if I want to use more than one address, I can store them all
+As a User, I would like to be able to edit the details/address stored on the sweet shop, so that If I move, or if I want to use more than one address, I can store them all
 
 <br>
 
@@ -301,7 +300,6 @@ Given that I have a user profile, And, I am logged into my profile, When I navig
 
 #### Implementation
 Develop the ability for users to save addresses to their profile
-Develop the ability for users to store more than one address on their profile
 Develop the ability for users to set one address as default
 Develop the ability for users to edit the addresses on their profile
 Develop the ability for users to delete the addresses on their profile
@@ -322,7 +320,7 @@ Given that I have a user account, When I navigate to the url to view my account 
 
 #### Implementation
 Develop a link in the menu that takes logged in users to their profile
-Develop a link within the user profile page that they can use to view all other information associated with the account - previous orders, wishlist items
+Develop a link within the user profile page that they can use to view all other information associated with the account - previous orders
 Restrict access to account details to logged in users - specifically the user whose details they are
 
 <br>

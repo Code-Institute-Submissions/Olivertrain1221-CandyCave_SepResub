@@ -84,7 +84,7 @@ def checkout(request):
                             order_line_item.save()
                 except Sweet.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't found!"
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -98,7 +98,8 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request,
+                           "There's nothing in your bag at the moment")
             return redirect(reverse('sweets:sweets'))
 
         current_basket = basket_items(request)

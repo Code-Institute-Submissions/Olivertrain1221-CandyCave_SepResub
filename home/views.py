@@ -63,4 +63,5 @@ def contactForm(request):
             messages.success(request, "Your Message has been sent!")
             return redirect('home:contact-us')
         else:
-            messages.error(request, "Sorry something isnt right with the form take another look!")
+            messages.error(request,
+                           "Sorry please check the form again!")
