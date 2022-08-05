@@ -53,147 +53,101 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg nav-background">
-      <div class="container d-flex justify-content-center nav-container w-100">
-        <div class="row justify-content-between w-100">
-
-          <!-- Nav bar Toggler -->
-          <div class="col">
-            <div class="d-flex justify-content-center">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggler-me"
-                aria-controls="nav-toggler-me" aria-expanded="false" aria-label="Toggle navigation">
-                MAIN<br>MENU
-              </button>
+    <nav class="navbar navbar-expand-lg mb-4 navbar-back">
+      <a class="navbar-brand nav-theme mr-4" href="{% url 'home:home' %}">CandyCave</a>
+      <button class="navbar-toggler nav-logo" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link active nav-theme" href="{% url 'home:home' %}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-theme">
+            <a class="nav-link nav-theme" href="{% url 'home:about' %}">About</a>
+          </li>
+          <li class="nav-item nav-theme">
+            <a class="nav-link nav-theme" href="{% url 'blog:blogpage' %}">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+                <a href="{% url 'sweets:amend_sweets' %}" class="dropdown-item nav-theme-dropdown">Sweet
+                  Management</a>
+              {% endif %}
+                <a href="{% url 'profile:profile' %}" class="dropdown-item nav-theme-dropdown">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item nav-theme-dropdown">Logout</a>
+              {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item nav-theme-dropdown">Signup</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item nav-theme-dropdown">Login</a>
+              {% endif %}
             </div>
-          </div>
-
-          <!-- Main logo -->
-          <div class="col col-nav justify-content-start">
-            <a class="navbar-brand m-1 nav-logo" href="{% url 'home:home' %}">CandyCave</a>
-          </div>
-
-          <!-- Main Nav -->
-          <div class="navbar-collapse collapse" id="nav-toggler-me">
-            <div class="col col-nav d-flex justify-content-center">
-              <div class="justify-content-center">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active nav-theme mr-4" aria-current="page" href="{% url 'home:home' %}">Home<i
-                        class="fa-solid fa-house m-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link nav-theme mr-4" href="{% url 'home:about' %}">About<i
-                        class="fa-solid fa-book-open m-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link nav-theme mr-4" href="{% url 'blog:blogpage' %}">Blog<i
-                        class="fa-solid fa-book-open m-1"></i></a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-theme" href="#" role="button"
-                      data-toggle="dropdown" aria-label="Shop" aria-expanded="false">Account<i
-                        class="fa-solid fa-user m-1"></i></a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      {% if request.user.is_authenticated %}
-                      {% if request.user.is_superuser %}
-                      <li>
-                        <a href="{% url 'sweets:amend_sweets' %}" class="dropdown-item nav-theme-dropdown">Sweet
-                          Management</a>
-                      </li>
-                      {% endif %}
-                      <li>
-                        <a href="{% url 'profile:profile' %}" class="dropdown-item nav-theme-dropdown">My Profile</a>
-                      </li>
-                      <li>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item nav-theme-dropdown">Logout</a>
-                      </li>
-                      {% else %}
-                      <li>
-                        <a href="{% url 'account_signup' %}" class="dropdown-item nav-theme-dropdown">Signup</a>
-                      </li>
-                      <li>
-                        <a href="{% url 'account_login' %}" class="dropdown-item nav-theme-dropdown">Login</a>
-                      </li>
-                      {% endif %}
-                    </ul>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button"
-                      data-toggle="dropdown" aria-expanded="false" aria-label="Shop">
-                      Shop<i class="fa-solid fa-bag-shopping m-1"></i>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i
-                            class="fa-solid fa-candy"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?sort=price&direction=asc">By Price<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?sort=rating&direction=desc">By Rating<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                        <p class="nav-headings">By Sweet Type</p>
-                      </li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=squidgy">Squidgy<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=sour">Sour<i class="fa-solid fa-party-horn"></i></a>
-                      </li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=hard">Boiled/Hard<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=chocolate">Chocolate<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=wrapped">Wrapped<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=long">Long<i class="fa-solid fa-party-horn"></i></a>
-                      </li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=new_arrivals">New Arrivals<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                      <li><a class="dropdown-item nav-theme-dropdown"
-                          href="{% url 'sweets:sweets' %}?category=the_classics">The Classics<i
-                            class="fa-solid fa-party-horn"></i></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-theme" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shop
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item nav-theme-dropdown" href="{% url 'sweets:sweets' %}">All Sweets!<i
+                  class="fa-solid fa-candy"></i></a>
+                
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?sort=price&direction=asc">By Price<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?sort=rating&direction=desc">By Rating<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <hr class="dropdown-divider">
+              <p class="nav-headings">By Sweet Type</p>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=squidgy">Squidgy<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=sour">Sour<i class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=hard">Boiled/Hard<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=chocolate">Chocolate<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=wrapped">Wrapped<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=long">Long<i class="fa-solid fa-party-horn"></i></a>
+              
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=new_arrivals">New Arrivals<i
+                    class="fa-solid fa-party-horn"></i></a>
+              <a class="dropdown-item nav-theme-dropdown"
+                  href="{% url 'sweets:sweets' %}?category=the_classics">The Classics<i
+                    class="fa-solid fa-party-horn"></i></a>
             </div>
-          </div>
-
-          <!-- Basket -->
-          <div class="col justify-content-end col-nav">
-            <div class="text-center">
-              <div><a class="basket" href="{% url 'basket:view_basket' %}"><i
-                    class="fa-solid fa-basket-shopping basket"></i></a>
-              </div>
-              <p class="my-0 basket">
-                {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
-                {% else %}
-                $0.00
-                {% endif %}
-              </p>
-            </div>
-          </div>
+          </li>
+        </ul>
+        <div><a class="basket" href="{% url 'basket:view_basket' %}"><i
+          class="fa-solid fa-basket-shopping basket"></i></a>
         </div>
+        <p class="my-0 basket">
+        {% if grand_total %}
+        ${{ grand_total|floatformat:2 }}
+        {% else %}
+        $0.00
+        {% endif %}
+        </p>
+          <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
+          <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </nav>
-
-        <!-- Search Bar -->
-        <div class="row search-bar-row">
-          <div class="col">
-            <form method="GET" action="{% url 'sweets:sweets' %}" class="d-flex justify-content-center">
-              <input class="form-control me-2 search-bar" type="text" name="search" placeholder="Search FOR GOODIES">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
   </header>
+
   {% if messages %}
   <div class="message-container">
     {% for message in messages %}
@@ -222,7 +176,7 @@
     <footer>
       <div class="mt-4 container py-5">
         <div class="row py-4 font-footer">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="col-lg-4 socials col-md-6 mb-4 mb-lg-0">
             <p class="font-italic green-footer">Taking the candy... out of the cave</p>
             <ul class="list-inline mt-4">
               <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i

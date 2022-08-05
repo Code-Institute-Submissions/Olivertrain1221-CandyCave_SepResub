@@ -81,7 +81,7 @@ From the Epics,I developed 15 user stories; however I feel that more were requir
 The stories also consisted of tasks within the stories due to me finding that a suitable user story required multiple elements in order to satisfy the overall picture. I found by adding the tasks that I was able to then successfully complete the stories and ensure that i had thought of the bigger picture.
 
 1. Navigation Around the Site [#1](https://github.com/Olivertrain1221/CandyCave/issues/6)
-2. Clear Pricing [#2]https://github.com/Olivertrain1221/CandyCave/issues/7)
+2. Clear Pricing [#2](https://github.com/Olivertrain1221/CandyCave/issues/7)
 3. Login To My Account [#3](https://github.com/Olivertrain1221/CandyCave/issues/8)
 4. Product Accessibility [#4](https://github.com/Olivertrain1221/CandyCave/issues/9)
 5. Pre-populate the site with products [#5](https://github.com/Olivertrain1221/CandyCave/issues/10)
@@ -101,7 +101,7 @@ The stories also consisted of tasks within the stories due to me finding that a 
 *User Address - Able to Create, Read, Update and Delete
 *User Login Details - Password Update/Change/Reset
 * Users can logout of their account
-* Sweet Products - Create, Read, Update and Delete
+* Sweet items - Create, Read, Update and Delete
 * Sweet Search - by category and keyword
 * Sweets individually- View product details or summary information
 * Shopping basket - Add, Update and Remove products from the shopping basket
@@ -109,8 +109,6 @@ The stories also consisted of tasks within the stories due to me finding that a 
 * Payment Processing - Successfully process payment information and confirm orders
 * Order Confirmation - Confirm order information on payment success
 * Blog - Create, Read, Update and Delete
-* Reviews - Create, Read, Update and Delete
-* Review responses - Create, Read, Update and Delete
 * Email newsletter subscription - Ability to subscribe to a company newsletter for marketing purposes.
 * Contact Us - Ability for all users to contact the company directly.
 * Responsive Design - the site needs to be fully responsive to cover the wide variety of devices users may use to access it
@@ -192,14 +190,14 @@ Link the form submission with an email system so that messages sent will arrive 
 <br>
 
 #### Create Blog Post
-As a user i woulod like to be able to share my views on the sweets I but and be able to read from real peoples there thoughts before I purhcase something to.
+As a user I would like to be able to share my views on the sweets I buy and be able to read other customers thoughts before I purhcase something.
 
 <br>
 
 #### Acceptance Criteria
-Given that I have an employee account, When I am logged into my account, Then I have the ability to create a new blog post
-Given that I am logged into my employee account, When I navigate to create a new blog post, Then I have a form to fill out to create my blog post
-Given that I am a logged in employee, When I successfully complete the blog post form and submit it, Then a new blog post is created and published to the site
+Given that I have an account, When I am logged into my account, Then I have the ability to create a new blog post
+Given that I am logged into my account, When I navigate to create a new blog post, Then I have a form to fill out to create my blog post
+Given that I am a logged in user, When I successfully complete the blog post form and submit it, Then a new blog post is created and published to the site
 
 <br>
 
@@ -207,7 +205,7 @@ Given that I am a logged in employee, When I successfully complete the blog post
 Create blog post model
 Create blog post form for employees to add blog posts to the site
 Develop validation to ensure that the blog post is completed correctly
-Restrict access to blog post form page to employees
+Restrict access to blog post form page to users only
 Develop backend processes to process the form and publish it to the site
 
 <br>
