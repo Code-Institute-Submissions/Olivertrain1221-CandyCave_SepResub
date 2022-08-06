@@ -443,11 +443,11 @@ All Sweets Page: I felt that it was important to display the sweets in a fancy/e
 
 <br>
 
-![All Products mobile Page wireframe](/static/docs/wireframes/shop_mobile.png)
+![All Products mobile Page wireframe](/static/docs/wireframes/sweet_shop_mobile.png)
 
 <br>
 
-![All Products mobile Page](/static/docs/site-images/sweet_shop_mobile.png)
+![All Products mobile Page](/static/docs/site-images/shop_mobile.png)
 
 <br>
 
