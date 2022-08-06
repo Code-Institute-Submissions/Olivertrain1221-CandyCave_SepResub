@@ -514,6 +514,10 @@ body {
     max-width: 100%;
 }
 
+.shopping-checkout {
+    background-color: rgb(44, 44, 44);
+}
+
 .bg-profile {
     background-color: rgb(44, 44, 44);
     border-radius: 1rem;
