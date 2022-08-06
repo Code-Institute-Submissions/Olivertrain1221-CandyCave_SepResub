@@ -45,6 +45,8 @@ I used a Javascript validator to ensure that my JavaScript is written correctly 
 
 The CSS Validator/Prefixer that I used is to ensure that my CSS is compatible with all devices that may use the site. [This is the site that I used](https://autoprefixer.github.io/). When validating by URL it discovers a total of 98 warnings relating to relating to style rules that were written correctly but not necessarily how the CSS file would like to see them. The Warnings are allowed warnings for the CSS due to them only being warnings and not errors.
 
+![CSS AutoPrefixer](/static/docs/testing/css_prefixer.png)
+
 ![Test Case 001b](/static/docs/testing_screenshots/tc00b.png)
 
 ## Test Case 001c
