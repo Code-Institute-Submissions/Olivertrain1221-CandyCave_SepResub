@@ -25,11 +25,10 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 bottom-check-page">
                 <p class="text-muted">Order Summary ({{ sweet_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
@@ -56,13 +55,13 @@
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Postage:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0">${{ grand_total|floatformat:2 }}</p>
+                        <p class="my-0">${{ post|floatformat:2 }}</p>
+                        <p class="my-0"><strong>${{ grand_total|floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -111,10 +110,10 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Bag</span>
+							<span class="font-weight-bold bottom-tags">Adjust Bag</span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+							<span class="font-weight-bold bottom-tags">Complete Order</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
@@ -130,13 +129,6 @@
             </div>
         </div>
     </div>
-    <!-- <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
-        </h1>
-    </div> -->
 {% endblock %}
 
 {% block postloadjs %}

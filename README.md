@@ -9,7 +9,7 @@ The site also shows reviews left by valid customers which is important for the s
 
 This is the fifth project for the Code Institute Diploma in Software Development with eCommerce.
 
-The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, Blog Posts and Categories along with Reviews and Responses.
+The site provides role based permissions for users to interact with a central dataset. It includes user authentication, email validation, Full CRUD functionality for approved users for Products, Categories, Blog Posts and more.
 
 ![Screenshot of homepage](/static/docs/site-images/home_desktop.png)
 
@@ -190,7 +190,7 @@ Link the form submission with an email system so that messages sent will arrive 
 <br>
 
 #### Create Blog Post
-As a user I would like to be able to share my views on the sweets I buy and be able to read other customers thoughts before I purhcase something.
+As a user I would like to be able to share my views on the sweets I buy and be able to read other customers thoughts before I purchase something.
 
 <br>
 
@@ -203,7 +203,7 @@ Given that I am a logged in user, When I successfully complete the blog post for
 
 ##### Implementation
 Create blog post model
-Create blog post form for employees to add blog posts to the site
+Create blog post form for users to add blog posts to the site
 Develop validation to ensure that the blog post is completed correctly
 Restrict access to blog post form page to users only
 Develop backend processes to process the form and publish it to the site
@@ -408,7 +408,7 @@ Develop the backend to process the form data and create a new product file/page 
 <br>
 
 ### Wireframe mock-ups
-Wireframes were produced for the Majority of ther sites main pages. This helped to develop a theme which i made sure to include on the more redundant pages that wireframes weren't made for (login/logut/contact us forms)[here](/static/docs/wireframes.pdf).
+Wireframes were produced for the Majority of ther sites main pages. This helped to develop a theme which i made sure to include on the more redundant pages that wireframes weren't made for (login/logut/contact us forms).
 
 Attention was paid to the elements that would be present on each page such as the header, nav bar  and the footer.
 The header allows for multiple levels of navigation around the site and also provides the user with shortcuts to information on the store plus there personal information and is all within the same place throught site navigating. This is important for continuity and fluidity through the site
@@ -480,8 +480,7 @@ I made Several Custom Models for the site that were required for the site in ord
 
 ![User and Address Models](/static/docs/database_planning/scema.png)
 
-For the sweets I made a custom model based on the boutique ado walkthrough project however I did add my own fields therefore I feel this is valid as my own view due to the changes and fields added. This was done by adding fields to show the weight of food that they can buy in and this gave the feel of a more filled customer user interface.
-A model also allows the user to leave a review/blog on the page to allow them to leave comments on a blog-style forum page. Relating to users creating reviews of products, one to record the user's review.
+For the sweets I made a custom model based on the boutique ado walkthrough project however I did add my own fields therefore I feel this is valid as my own view due to the changes and fields added. This was done by adding fields to show the weight of food that they can buy in and this gave the feel of a more filled customer user interface. Allowing the business to easily control the numbers.
 
 <br>
 
@@ -515,7 +514,7 @@ For the site I considered the SEO to be important because why build a great Site
 ![Party](/static/docs/seo_optimisation/party_usa.png)
 
 
-For the searching of these important key words i used “Semsrush” this was useful in order to help with the finding what words needed to be used to make it worldwide hence the “candy and sweets” also as you can see the “Sweet Shop USA” is a massive low rate in the USA as the term sweet shop isn't used.
+For the searching of these important key words I used “Semsrush” this was useful in order to help with the finding what words needed to be used to make it worldwide hence the “candy and sweets” also as you can see the “Sweet Shop USA” is a massive low rate in the USA as the term sweet shop isn't used.
 
 <br>
 

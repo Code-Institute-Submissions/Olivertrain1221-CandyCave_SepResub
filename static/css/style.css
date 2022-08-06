@@ -366,13 +366,21 @@ body {
     color: rgb(255, 255, 255)
 }
 
+.basket-backing {
+    background-color: rgb(44, 44, 44);
+}
+
+.bottom-check-page {
+    background-color: rgb(44, 44, 44);
+}
+
 .chimp {
     background-color: rgba(135, 9, 131, 1);
 }
 
 #sweet-filter {
     background-color: rgb(44, 44, 44);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 0, 255);
     height: 40px;
     width: 300px;

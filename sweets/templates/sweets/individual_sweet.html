@@ -89,8 +89,8 @@
     {% if request.user.is_superuser %}
         <div class="m-4">
             <small>
-                <button class="btn-lg btn-success" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</button>
-                <button class="btn-lg btn-danger" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</button>
+                <a class="btn-lg btn-success" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</a>
+                <a class="btn-lg btn-danger" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</a>
             </small>
         </div>
     {% endif %}
