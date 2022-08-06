@@ -551,8 +551,17 @@ body {
 
 
 @media (max-width: 1550px) {
+    .basket {
+        font-size: 1.5rem;
+    }
+
+    .nav-theme {
+        font-size: 2rem;
+    }
+
     .table-decription,
     .basket-table td {
+
         font-size: 1.0rem;
     }
 }

@@ -56,6 +56,8 @@ When validating the pages using their URL the validator return three warnings re
 
 I was also with an error I noticed during validation that I found was due to the fact that there was no “alt” attribute assigned to the Mail Chimp, I Added my own “alt” attribute, and the error now doesn't exist.
 
+Along with a fault due to the error for the Stripe payment.
+
 ![Test Case 001c](/static/docs/testing_screenshots/tc001c.png)
 
 ## Test Case 002

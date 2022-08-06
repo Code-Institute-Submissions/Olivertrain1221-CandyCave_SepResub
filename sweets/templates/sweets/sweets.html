@@ -12,77 +12,85 @@
 {% block content %}
 <div class="d-flex justify-content-center mt-1 mb-2 sweet container">
     <div class="sort-select-wrapper">
-        <select id="sweet-filter" class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
+        <select id="sweet-filter"
+            class="custom-select custom-select-sm rounded-0 border border-{% if sorting_method != 'None_None' %}info{% else %}black{% endif %} sort-bar">
             <option value="reset" {% if sorting_method == 'None_None' %}selected{% endif %}>Sort by...</option>
-            <option value="price_asc" {% if sorting_method == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-            <option value="price_desc" {% if sorting_method == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-            <option value="rating_asc" {% if sorting_method == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-            <option value="rating_desc" {% if sorting_method == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+            <option value="price_asc" {% if sorting_method == 'price_asc' %}selected{% endif %}>Price (low to high)
+            </option>
+            <option value="price_desc" {% if sorting_method == 'price_desc' %}selected{% endif %}>Price (high to low)
+            </option>
+            <option value="rating_asc" {% if sorting_method == 'rating_asc' %}selected{% endif %}>Rating (low to high)
+            </option>
+            <option value="rating_desc" {% if sorting_method == 'rating_desc' %}selected{% endif %}>Rating (high to low)
+            </option>
             <option value="name_asc" {% if sorting_method == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
             <option value="name_desc" {% if sorting_method == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
         </select>
         <p class="text-muted mt-3 text-center text-md-left">
             {% if search_term or sweet_type or sorting_method != 'None_None' %}
-                <span class="small current-fields"><a class="current-fields" href="{% url 'sweets:sweets' %}">Candy Home</a> | </span>
+            <span class="small current-fields"><a class="current-fields" href="{% url 'sweets:sweets' %}">Candy Home</a>
+                | </span>
             {% endif %}
             {{ sweets|length }} sweets{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
     </div>
 </div>
 <div class="row m-0 d-flex justify-content-center">
-        {% for sweet in sweets %}
-        <div class="mb-4">
+    {% for sweet in sweets %}
+    <div class="mb-4">
+        <div class="card col-xl-2 text-center">
+            {% if sweet.image %}
             <a href="{% url 'sweets:sweet_individual' sweet.id %}">
-                <div class="card col-xl-2 text-center">
-                    {% if sweet.image %}
-                        <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
-                    {% endif %}
-                    <div class="card-body ">
-                        <h5 class="card-text-name">{{ sweet.name }}</h5>
-                        <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>
-                        {% if sweet.measurement_of_sweet %}
-                            <p class="card-text">£{{ sweet.get_display_price }} per 100 grams</p>
-                        {% else %}
-                            <p class="card-text">£{{ sweet.price }} per packet</p>
-                        {% endif %}
-                        {% if sweet.rating %}
-                            <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
-                        {% else %}
-                            <small class="card-text-rating">No Rating</small>
-                        {% endif %}
-                    </div>
-                    {% if sweet.category %}
-                        <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
-                        <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
-                        </a>
-                    {% endif %}
-                </div>
+                <img class="card-img-top" src="{{ sweet.image.url }}" alt="{{ sweet.name }}">
             </a>
+            {% endif %}
+            <a href="{% url 'sweets:sweet_individual' sweet.id %}">
+            <div class="card-body ">
+                <h5 class="card-text-name">{{ sweet.name }}</h5>
+                <p class="card-text">{{ sweet.info|truncatechars:40 }}</p>
+                {% if sweet.measurement_of_sweet %}
+                <p class="card-text">£{{ sweet.get_display_price }} per 100 grams</p>
+                {% else %}
+                <p class="card-text">£{{ sweet.price }} per packet</p>
+                {% endif %}
+                {% if sweet.rating %}
+                <small class="card-text-rating"><i class="fas fa-star mr-1"></i>{{sweet.rating }} / 5</small>
+                {% else %}
+                <small class="card-text-rating">No Rating</small>
+                {% endif %}
+            </div>
+            </a>
+            {% if sweet.category %}
+            <a class="text-muted" href="{% url 'sweets:sweets' %}?category={{ sweet.category.name }}">
+                <i class="fas fa-tag mr-1"></i>{{ sweet.category.friendly_name }}
+            </a>
+            {% endif %}
         </div>
-        {% endfor %}
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $('#sweet-filter').change(function() {
-            var filterValue = $(this);
-            var currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('#sweet-filter').change(function () {
+        var filterValue = $(this);
+        var currentUrl = new URL(window.location);
 
-            var userChoice = filterValue.val();
-            if(userChoice != "reset"){
-                var userFilterChoice = userChoice.split("_")[0]
-                var direction = userChoice.split("_")[1]
-                currentUrl.searchParams.set("sort", userFilterChoice);
-                currentUrl.searchParams.set("direction", direction);
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+        var userChoice = filterValue.val();
+        if (userChoice != "reset") {
+            var userFilterChoice = userChoice.split("_")[0]
+            var direction = userChoice.split("_")[1]
+            currentUrl.searchParams.set("sort", userFilterChoice);
+            currentUrl.searchParams.set("direction", direction);
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
 
-                window.location.replace(currentUrl);
-                
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+
+        }
+    })
+</script>
 {% endblock %}

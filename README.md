@@ -653,8 +653,6 @@ Separate to the functionality testing of the site, and the testing of the code, 
 #### Testing Overview
 The Testing for the site was split in to subsections and then down into finer sections to ensure that the site is built correctly and works as designed to do so.
 
-[Testing Schedule Overview](/static/docs/testing/testing-schedule.pdf)
-
 A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file [here](TESTING.md)
 
 <br>
@@ -677,7 +675,7 @@ Automated tests were not written for this site however i did plan to the site au
 #### Lighthouse Testing
 I used Google's lighthouse built in feature to chrome to get an overall assessment of the site's setup. Whilst all the areas of the test return a green score above 90 occasionally the performance would drop to 80-85 however I put this down to a weaker internet connection at these times. The SEO score returned a perfect 100.
 
-![Google Lighthouse Results](png)
+![Google Lighthouse Results]()
 
 #### Notable Bugs
 * Within the blog post page A issue I faced and could work out was due to the fact that the slug was not being correctly passed through or adapted and saved/made for the database once i realized I had to force it to save the slug i used the slugify import to do so.
