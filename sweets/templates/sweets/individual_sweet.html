@@ -73,14 +73,14 @@
                 </div>
             </div>
 
-            <div class="col-12">
+            <div class="d-flex justify-content-center">
                 <a href="{% url 'sweets:sweets' %}" class="btn btn-outline-black rounded-0 mt-5">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
-                    <span class="text-uppercase">Keep Shopping</span>
+                    <span class="text-uppercase bottom-tags">Keep Shopping</span>
                 </a>
-                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Basket">
+                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 bottom-tags" value="Add to Basket">
             </div>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             {% endwith %}
@@ -89,8 +89,8 @@
     {% if request.user.is_superuser %}
         <div class="m-4">
             <small>
-                <a class="btn-lg btn-success" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</a>
-                <a class="btn-lg btn-danger" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</a>
+                <button class="btn-lg btn-success" href="{% url 'sweets:edit_sweet' sweet.id %}">Edit</button>
+                <button class="btn-lg btn-danger" href="{% url 'sweets:delete_sweet' sweet.id %}">Delete</button>
             </small>
         </div>
     {% endif %}

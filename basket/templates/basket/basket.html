@@ -27,11 +27,11 @@
                             <table class="table table-sm table">
                                 <thead class="basket-table">
                                     <tr>
-                                        <th>Sweet</th>
-                                        <th>Description</th>
-                                        <th></th>
-                                        <th>Quantity</th>
-                                        <th>Price</th>
+                                        <th class="table-decription">Sweet</th>
+                                        <th class="table-decription">Description</th>
+                                        <th class="table-decription"></th>
+                                        <th class="table-decription">Quantity</th>
+                                        <th class="table-decription">Price</th>
                                     </tr>
                                 </thead>
                                 {% for item in basket_selection %}
@@ -79,23 +79,23 @@
                                                 <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-sweet_measurement="{{ item.size }}"><small>Remove</small></a>
                                         </td>
                                         {% if item.sweet.measurement_of_sweet %}
-                                            <td class="py-3">
+                                            <td class="py-3 bottom-checkout">
                                                 <p>£{{ item.sweet_total_price }}</p>
                                             </td>
                                         {% else %}
-                                            <td class="py-3">
+                                            <td class="py-3 bottom-checkout">
                                                 <p>£{{ item.sweet.price }}</p>
                                             </td>
                                         {% endif %}
                                     </tr>
                                     {% endfor %}
                                     <tr>
-                                        <td colspan="5" class="pt-5 text-right basket-table">
-                                            <h6><strong>Bag Total: ${{ basket_sum|floatformat:2 }}</strong></h6>
-                                            <h6>Postage: ${{ post|floatformat:2 }}</h6>
-                                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                        <td colspan="5" class="pt-5 text-right basket-table bottom-checkout">
+                                            <h6 class="bottom-checkout"><strong>Bag Total: ${{ basket_sum|floatformat:2 }}</strong></h6>
+                                            <h6 class="bottom-checkout">Postage: ${{ post|floatformat:2 }}</h6>
+                                            <h4 class="mt-4 bottom-checkout"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                             {% if free_postage_mark > 0 %}
-                                                <p class="mb-1 text-danger">
+                                                <p class="mb-1 text-danger bottom-checkout">
                                                     You could get free postage by spending just <strong>${{ free_postage_mark }}</strong> more!
                                                 </p>
                                             {% endif %}
@@ -107,10 +107,10 @@
                                                 <span class="icon">
                                                     <i class="fas fa-chevron-left"></i>
                                                 </span>
-                                                <span class="text-uppercase">Keep Shopping</span>
+                                                <span class="text-uppercase bottom-checkout">Keep Shopping</span>
                                             </a>
                                             <a href="{% url 'checkout:checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                                <span class="text-uppercase">Secure Checkout</span>
+                                                <span class="text-uppercase bottom-checkout">Secure Checkout</span>
                                                 <span class="icon">
                                                     <i class="fas fa-lock"></i>
                                                 </span>
