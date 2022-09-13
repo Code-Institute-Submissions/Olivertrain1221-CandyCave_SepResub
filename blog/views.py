@@ -55,21 +55,21 @@ def BlogPostEdit(request, slug):
     and to handle form processing
     '''
     post = get_object_or_404(Posts, slug=slug)
-    form = BlogForm(instance=post)
-    if request.user == post.author:
-        if request.method == 'POST':
-            form = BlogForm(request.POST, request.FILES or None, instance=post)
-            if form.is_valid():
-                changed_form = form.save(commit=False)
-                changed_form.author = request.user
-                changed_form.save()
-                messages.success(request, 'Successfully edited your blog post')
-                return redirect('blog:blogpage')
-            else:
-                messages.error(request, 'Failed to update blog post, \
-                    please double check the form.')
-    else:
+    if not request.user == post.author:
         messages.error(request, 'This is not your post')
+        return redirect('blog:blogpage')
+    form = BlogForm(instance=post)
+    if request.method == 'POST':
+        form = BlogForm(request.POST, request.FILES or None, instance=post)
+        if form.is_valid():
+            changed_form = form.save(commit=False)
+            changed_form.author = request.user
+            changed_form.save()
+            messages.success(request, 'Successfully edited your blog post')
+            return redirect('blog:blogpage')
+        else:
+            messages.error(request, 'Failed to update blog post, \
+                please double check the form.')
 
     context = {
         'form': form,
@@ -85,8 +85,9 @@ def deletePost(request, slug):
     View to handle the deletion of a blog post
     '''
     post = get_object_or_404(Posts, slug=slug)
-
-    if request.user == post.author:
-        post.delete()
-        messages.success(request, 'The post has been deleted.')
+    if not request.user == post.author:
+        messages.error(request, 'This is not your post')
+        return redirect('blog:blogpage')
+    post.delete()
+    messages.success(request, 'The post has been deleted.')
     return redirect('blog:blogpage')
