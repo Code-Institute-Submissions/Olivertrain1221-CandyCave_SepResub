@@ -48,6 +48,7 @@ def UserAddPost(request):
     return render(request, template, context)
 
 
+@login_required
 def BlogPostEdit(request, slug):
     '''
     View to display prefilled form to edit a blog post
@@ -75,11 +76,14 @@ def BlogPostEdit(request, slug):
     return render(request, 'blog/add_post.html', context)
 
 
+@login_required
 def deletePost(request, slug):
     '''
     View to handle the deletion of a blog post
     '''
     post = get_object_or_404(Posts, slug=slug)
-    post.delete()
-    messages.success(request, 'The post has been deleted.')
+
+    if request.user == post.author:
+        post.delete()
+        messages.success(request, 'The post has been deleted.')
     return redirect('blog:blogpage')
