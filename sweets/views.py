@@ -74,6 +74,9 @@ def individual_sweet(request, product_id):
 
 @login_required
 def user_add_sweets(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry not a Superuser!')
+        return redirect(reverse('sweets:sweets'))
     if request.method == 'POST':
         form = SweetForm(request.POST, request.FILES)
         if form.is_valid():
@@ -98,6 +101,9 @@ def edit_sweet(request, product_id):
     Edit existing product
     """
     sweet = get_object_or_404(Sweet, pk=product_id)
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry not a Superuser!')
+        return redirect(reverse('sweets:sweets'))
     if request.method == 'POST':
         form = SweetForm(request.POST, request.FILES, instance=sweet)
         if form.is_valid():
@@ -124,6 +130,9 @@ def delete_sweet(request, product_id):
     """
     Edit existing product
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry not a Superuser!')
+        return redirect(reverse('sweets:sweets'))
     sweet = get_object_or_404(Sweet, pk=product_id)
     sweet.delete()
     messages.success(request, 'Thats that in the bin!')

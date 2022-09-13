@@ -56,17 +56,20 @@ def BlogPostEdit(request, slug):
     '''
     post = get_object_or_404(Posts, slug=slug)
     form = BlogForm(instance=post)
-    if request.method == 'POST':
-        form = BlogForm(request.POST, request.FILES or None, instance=post)
-        if form.is_valid():
-            changed_form = form.save(commit=False)
-            changed_form.author = request.user
-            changed_form.save()
-            messages.success(request, 'Successfully edited your blog post')
-            return redirect('blog:blogpage')
-        else:
-            messages.error(request, 'Failed to update blog post, \
-                please double check the form.')
+    if request.user == post.author:
+        if request.method == 'POST':
+            form = BlogForm(request.POST, request.FILES or None, instance=post)
+            if form.is_valid():
+                changed_form = form.save(commit=False)
+                changed_form.author = request.user
+                changed_form.save()
+                messages.success(request, 'Successfully edited your blog post')
+                return redirect('blog:blogpage')
+            else:
+                messages.error(request, 'Failed to update blog post, \
+                    please double check the form.')
+    else:
+        messages.error(request, 'This is not your post')
 
     context = {
         'form': form,
