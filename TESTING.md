@@ -137,3 +137,10 @@ I also had on the site in the About page there is a contact us form. This used a
 
 ### Registered User Testing - Blog Page
 Testing was also carried out when a registered user and the template doesnt change but when clicking the "Add Blog" button it allows the user to the form to create a post.
+
+## Test Case 011
+
+### Registered User Testing - Blog Page FAILED TESTING
+Although extensive testing was carried out due to unforseen circumstances testing the back root via knowing the URL's of the site and could therefore navigate round the site regardless fo ownership of a post. This therefore meant a serious security issue. 
+I sorted this out by Immediately checking that if the user is NOT x user then not to carry on any further i also added in the @login_requried for extra security too.
+This Cost me a my submission therefore also made sure to be safe and check everything else. I Managed to replicate a 500 error and therefore also built a view and url and template that handles this issue!
