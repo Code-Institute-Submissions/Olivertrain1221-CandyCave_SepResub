@@ -199,6 +199,11 @@ body {
     font-size: 3rem;
 }
 
+.shop-now-button {
+    background-color: rgba(44, 44, 44, 0.485);
+    color: rgb(255 0 255);
+    font-size: 3rem;
+}
 
 .shop-btn:hover {
     color: rgba(9, 255, 0, 0.768);
