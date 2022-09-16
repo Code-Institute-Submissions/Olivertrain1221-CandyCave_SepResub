@@ -314,6 +314,9 @@ body {
     margin-bottom: 20px;
 }
 
+.table {
+    color: #0080ff;
+}
 
 .table-decription {
     font-size: 1.5rem;
